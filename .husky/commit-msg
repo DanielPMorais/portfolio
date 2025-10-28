@@ -1,1 +1,4 @@
+# Adiciona o PATH do Node.js via NVM
+export PATH="$HOME/.nvm/versions/node/v24.6.0/bin:$PATH"
+
 npx --no -- commitlint --edit "$1"
