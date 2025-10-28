@@ -1,5 +1,6 @@
 import { Header } from './components/layout/Header/Header';
 import { Hero } from './features/Hero/Hero';
+import { Projects } from './features/Projects/Projects';
 
 function App() {
   return (
@@ -8,8 +9,8 @@ function App() {
 
       <main>
         <Hero />
-        {/* Próximos passos:
         <Projects />
+        {/* Próximos passos:
         <Skills />
         <Contact />
         */}

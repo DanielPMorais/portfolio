@@ -14,6 +14,11 @@ export function Header() {
   return (
     <header className={`${styles.navbar} ${isMobileMenuOpen ? styles.isNavOpen : ''}`}>
       <Container className={styles.navContainer}>
+        {/* Em breve, alterar para outra coisa como um ícone ou algo do tipo */}
+        <div className={styles.logo}>
+          <a href="#">Daniel</a>
+        </div>
+
         <button
           className={styles.hamburgerButton}
           onClick={toggleMobileMenu}
@@ -31,10 +36,7 @@ export function Header() {
               <a href="#projects">Projetos</a>
             </li>
             <li>
-              <a href="#soft-skills">Soft-skills</a>
-            </li>
-            <li>
-              <a href="#hard-skills">Hard-skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
               <a href="#about-me">Sobre mim</a>
@@ -61,13 +63,8 @@ export function Header() {
               </a>
             </li>
             <li>
-              <a href="#soft-skills" onClick={toggleMobileMenu}>
-                Soft-skills
-              </a>
-            </li>
-            <li>
-              <a href="#hard-skills" onClick={toggleMobileMenu}>
-                Hard-skills
+              <a href="#skills" onClick={toggleMobileMenu}>
+                Skills
               </a>
             </li>
             <li>
