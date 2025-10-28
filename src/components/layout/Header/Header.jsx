@@ -39,9 +39,6 @@ export function Header() {
             <li>
               <a href="#about-me">Sobre mim</a>
             </li>
-            <li>
-              <a href="#about-me">Sobre mim</a>
-            </li>
           </ul>
         </nav>
 

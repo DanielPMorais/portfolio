@@ -5,10 +5,13 @@
   z-index: 100;
   padding-top: var(--spacing-2);
   padding-bottom: var(--spacing-2);
+  position: relative;
 }
 
 .navContainer {
   display: flex;
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
   justify-content: space-around;
   align-items: center;
 }
@@ -41,6 +44,7 @@
   font-size: 1.75rem;
   /* 28px */
   cursor: pointer;
+  position: relative;
   z-index: 120;
 }
 
@@ -55,6 +59,7 @@
   transform: translateY(-10px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 110;
 }
 
 .navbar.isNavOpen .mobileNav {
@@ -96,6 +101,10 @@
 
   .hamburgerButton {
     display: block;
+  }
+
+  .navContainer {
+    justify-content: space-between;
   }
 
   .mobileNav {
