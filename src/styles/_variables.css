@@ -68,6 +68,10 @@
   /* 56px */
   --spacing-8: 4rem;
   /* 64px */
+  --spacing-9: 5rem;
+  /* 80px */
+  --spacing-10: 6rem;
+  /* 96px */
 
   /* Outros */
   --border-radius-md: 8px;

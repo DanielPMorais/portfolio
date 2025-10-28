@@ -10,6 +10,8 @@
 /* Melhora a fluidez da rolagem */
 html {
   scroll-behavior: smooth;
+  /* Previne overflow horizontal */
+  overflow-x: hidden;
 }
 
 /* Aplica os estilos base (tokens) ao corpo do site */
@@ -24,6 +26,10 @@ body {
 
   -webkit-font-smoothing: antialiased; /* Melhora renderização de fontes */
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Previne overflow horizontal */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Aplica a fonte de UI (Roboto) para títulos e elementos de UI */
