@@ -1,0 +1,64 @@
+/* Define o box-sizing universalmente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Melhora a fluidez da rolagem */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Aplica os estilos base (tokens) ao corpo do site */
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-text-body);
+  background-color: var(--color-background);
+
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased; /* Melhora renderização de fontes */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Aplica a fonte de UI (Roboto) para títulos e elementos de UI */
+h1, h2, h3, h4, h5, h6,
+button {
+  font-family: var(--font-family-ui);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Remove estilos padrão de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Torna imagens responsivas por padrão */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove estilos padrão de links e botões */
+a {
+  text-decoration: none;
+  color: inherit; /* Herda a cor do pai */
+}
+
+button {
+  font-family: inherit; /* Garante que botões usem a mesma fonte */
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
+}

@@ -1,0 +1,90 @@
+:root {
+  /* ================================== */
+  /* 1. TOKENS BRUTOS */
+  /* ================================== */
+
+  --raw-color-light-blue: #E8F1FF;
+  --raw-color-dark-blue: #212833;
+  --raw-color-dark-surface: #2F3949;
+  --raw-color-light-surface: #D2E3FF;
+
+  /* ================================================== */
+  /* 2. TOKENS SEMÂNTICOS (Padrão: Tema Claro) */
+  /* ================================================== */
+
+  /* Cores de Fundo */
+  --color-background: var(--raw-color-light-blue);
+  --color-nav-background: var(--raw-color-dark-surface);
+  --color-icon-background: var(--raw-color-dark-surface);
+  --color-icon-hover-background: var(--raw-color-light-blue);
+  --color-icon-hover-background-2: var(--raw-color-dark-blue);
+  --color-carousel-background: var(--raw-color-light-surface);
+
+  /* Cores de Texto */
+  --color-text-body: var(--raw-color-dark-blue);
+  --color-text-nav: var(--raw-color-light-blue);
+
+  --color-primary: #ffffff;
+
+  /* ================================== */
+  /* 3. Outros Tokens (Tipografia, etc) */
+  /* ================================== */
+
+  /* Tipografia */
+  --font-family-body: 'Poppins', sans-serif;
+  /* Para textos maiores, parágrafos (ex: Sobre mim) */
+  --font-family-ui: 'Roboto', sans-serif;
+  /* Para Títulos, Navbar, Botões */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Tamanhos (ex: 16px, 24px, 36px) */
+  --font-size-body: 1rem;
+  /* 16px */
+  --font-size-md: 1.5rem;
+  /* 24px */
+  --font-size-lg: 2.25rem;
+  /* 36px */
+
+  /* Espaçamento (Baseado em 8px) */
+  --spacing-1: 0.5rem;
+  /* 8px */
+  --spacing-2: 1rem;
+  /* 16px */
+  --spacing-3: 1.5rem;
+  /* 24px */
+  --spacing-4: 2rem;
+  /* 32px */
+  --spacing-5: 2.5rem;
+  /* 40px */
+  --spacing-6: 3rem;
+  /* 48px */
+  --spacing-7: 3.5rem;
+  /* 56px */
+  --spacing-8: 4rem;
+  /* 64px */
+
+  /* Outros */
+  --border-radius-md: 8px;
+}
+
+/* ================================================== */
+/* 3. TOKENS SEMÂNTICOS (Override: Tema Escuro) */
+/* ================================================== */
+/* Quando o <html> tiver o atributo [data-theme="dark"]... */
+html[data-theme="dark"] {
+  /* ...nós re-mapeamos os mesmos tokens semânticos para
+     os valores do seu "tema escuro". */
+
+  /* Cores de Fundo */
+  --color-background: var(--raw-color-dark-surface);
+  --color-nav-background: var(--raw-color-dark-blue);
+  --color-icon-background: var(--raw-color-light-surface);
+  --color-carousel-background: var(--raw-color-dark-blue);
+
+  /* Cores de Texto */
+  --color-text-body: var(--raw-color-light-blue);
+  --color-text-nav: var(--raw-color-light-blue);
+}
