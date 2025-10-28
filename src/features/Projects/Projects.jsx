@@ -19,7 +19,7 @@ const allProjectsData = [
 export function Projects() {
   return (
     <Container>
-      <section id="projetos" className={styles.projectsSection}>
+      <section id="projects" className={styles.projectsSection}>
         {/* Subseção Destaques */}
         <h3 className={styles.sectionSubtitle}>Destaques</h3>
         <div className={`${styles.projectGrid} ${styles.featuredGrid}`}>

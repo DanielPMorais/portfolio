@@ -1,5 +1,5 @@
 .heroBackground {
-  padding-top: var(--spacing-3);
+  padding-top: var(--spacing-10);
   padding-bottom: var(--spacing-3);
   gap: var(--spacing-4);
   min-height: 90vh;
@@ -113,12 +113,14 @@
   -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   width: 100%;
+  max-width: 100%; /* Garante que não ultrapasse o container */
 }
 
 .scrollerTrack {
   display: flex;
   width: max-content;
   animation: scroll 30s linear infinite;
+  min-width: 100%; /* Garante largura mínima */
 }
 
 .techStack:hover .scrollerTrack {
@@ -158,7 +160,7 @@
 @media (min-width: 768px) {
 
   .heroBackground {
-    padding-top: var(--spacing-6);
+    padding-top: var(--spacing-9);
     padding-bottom: var(--spacing-6);
   }
 

@@ -20,8 +20,8 @@ const techIcons = [
 
 export function Hero() {
   return (
-    <section id="about-me" className={styles.heroBackground}>
-      <Container id="about-me" className={styles.heroContainer}>
+    <section id="home" className={styles.heroBackground}>
+      <Container className={styles.heroContainer}>
         <div className={styles.heroContent}>
           <h1>Olá, sou Daniel!</h1>
           <p>

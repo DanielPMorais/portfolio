@@ -8,12 +8,29 @@
   position: relative;
 }
 
+.navbarFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .navContainer {
   display: flex;
-  padding-left: var(--spacing-2);
-  padding-right: var(--spacing-2);
   justify-content: space-between; /* Mobile: space-between por padrão */
   align-items: center;
+  position: relative; /* Para posicionamento absoluto do título */
+}
+
+.mobileSectionTitle {
+  display: block;
+  font-size: 1.25rem; /* 20px */
+  font-weight: var(--font-weight-medium);
+  /* Centralização absoluta */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none; /* Para não interferir com cliques */
 }
 
 .logo {
@@ -62,7 +79,7 @@
   right: 0;
   background-color: var(--color-nav-background);
   padding: var(--spacing-4);
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 110;
@@ -71,6 +88,7 @@
 .navbar.isNavOpen .mobileNav {
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .mobileNavList {
@@ -81,8 +99,7 @@
 }
 
 .mobileNavList a {
-  font-family: var(--font-family-ui);
-  font-size: 1.25rem;
+  font-size: var(--font-size-content);
   /* 20px */
   font-weight: var(--font-weight-medium);
 }
@@ -92,7 +109,6 @@
 }
 
 .themeToggle button {
-  font-family: var(--font-family-ui);
   color: var(--color-text-nav);
   background-color: var(--color-icon-background);
   padding: var(--spacing-1);
@@ -100,7 +116,7 @@
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
   .navContainer {
     justify-content: space-around; /* Desktop: space-around */
@@ -114,8 +130,13 @@
   /* Desktop: Mostra desktop nav */
   .desktopNav {
     display: block;
+    position: relative; /* Para posicionar o indicador */
   }
 
+  .mobileSectionTitle {
+    display: none;
+  }
+  
   /* Desktop: Esconde hamburger */
   .hamburgerButton {
     display: none;
@@ -124,5 +145,38 @@
   /* Desktop: Esconde mobile nav */
   .mobileNav {
     display: none;
+  }
+
+  .navList {
+    display: flex;
+    gap: var(--spacing-3);
+    position: relative;
+  }
+
+  .navList a {
+    font-weight: var(--font-weight-medium);
+    transition: color 0.2s ease-in-out;
+    padding: var(--spacing-1);
+    position: relative;
+  }
+
+  .navList a:hover {
+    color: var(--color-primary); /* Branco */
+  }
+  
+  .navList a.activeLink {
+    color: var(--color-primary); /* Branco */
+  }
+
+  /* Indicador deslizante */
+  .slideIndicator {
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none; /* Para não interferir com cliques */
   }
 }
