@@ -31,11 +31,23 @@ export function Hero() {
           </p>
 
           <div className={styles.techStack}>
-            {techIcons.map((tech) => (
-              <div key={tech.name} className={styles.techIcon} aria-label={tech.name}>
-                {tech.icon}
-              </div>
-            ))}
+            <div className={styles.scrollerTrack}>
+              <ul className={styles.scrollerList}>
+                {techIcons.map((tech) => (
+                  <li key={tech.name} className={styles.techIcon}>
+                    {tech.icon}
+                  </li>
+                ))}
+              </ul>
+
+              <ul className={styles.scrollerList} aria-hidden="true">
+                {techIcons.map((tech) => (
+                  <li key={`${tech.name}-duplicate`} className={styles.techIcon}>
+                    {tech.icon}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 

@@ -70,22 +70,24 @@
 }
 
 
-
 .heroContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .heroContent h1 {
-  font-size: var(--font-size-lg, 2.25rem); /* 36px */
+  font-size: var(--font-size-lg, 2.25rem);
+  /* 36px */
   color: var(--color-text-body);
   margin-bottom: var(--spacing-2);
 }
 
 .heroContent p {
-  font-size: var(--font-size-body, 1rem); /* 16px */
+  font-size: var(--font-size-body, 1rem);
+  /* 16px */
   color: var(--color-text-secondary, var(--color-text-body));
   line-height: 1.7;
   max-width: 60ch;
@@ -93,22 +95,56 @@
 }
 
 .techStack {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--spacing-2);
   background-color: var(--color-carousel-background);
-  padding: var(--spacing-2) var(--spacing-3);
   border-radius: var(--border-radius-md);
+  overflow: hidden;
+  padding: var(--spacing-2) 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  width: 100%;
+}
+
+.scrollerTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.techStack:hover .scrollerTrack {
+  animation-play-state: paused;
+}
+
+.scrollerList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--spacing-4);
+  padding-right: var(--spacing-4);
 }
 
 .techIcon {
-  font-size: 2.5rem; /* 40px */
+  font-size: var(--spacing-5);
+  /* 40px */
+  transition: transform 0.2s ease-in-out;
+}
+
+.techIcon:hover {
+  transform: scale(1.25);
+}
+
+@keyframes scroll {
+from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 
 @media (min-width: 768px) {
-  
+
   .heroBackground {
     padding-top: var(--spacing-6);
     padding-bottom: var(--spacing-6);
@@ -129,8 +165,11 @@
 
   .techStack {
     justify-content: flex-start;
+    max-width: 500px;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
-  
+
   .heroAside {
     flex-shrink: 0;
   }
@@ -143,6 +182,7 @@
   .socialLinks a {
     width: 60px;
     height: 60px;
-    font-size: 1.75rem; /* 28px */
+    font-size: 1.75rem;
+    /* 28px */
   }
 }
