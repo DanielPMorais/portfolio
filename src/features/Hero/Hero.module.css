@@ -1,0 +1,148 @@
+.heroBackground {
+  gap: var(--spacing-4);
+  padding: var(--spacing-6) var(--spacing-4);
+  min-height: 90vh;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.heroAside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.heroImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--color-icon-background);
+  overflow: hidden;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.socialLinks a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-icon-background);
+  color: var(--color-text-nav);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.socialLinks a:hover {
+  transform: scale(1.1);
+  background-color: var(--color-icon-hover-background, var(--color-icon-background));
+}
+
+.icon {
+  transition: color 0.15s ease, fill 0.15s ease;
+  color: var(--color-text-nav);
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLinks a:hover .icon {
+  color: var(--color-icon-hover-background-2);
+  fill: var(--color-icon-hover-background-2);
+}
+
+
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: var(--font-size-lg, 2.25rem); /* 36px */
+  color: var(--color-text-body);
+  margin-bottom: var(--spacing-2);
+}
+
+.heroContent p {
+  font-size: var(--font-size-body, 1rem); /* 16px */
+  color: var(--color-text-secondary, var(--color-text-body));
+  line-height: 1.7;
+  max-width: 60ch;
+  margin-bottom: var(--spacing-4);
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-2);
+  background-color: var(--color-carousel-background);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+}
+
+.techIcon {
+  font-size: 2.5rem; /* 40px */
+}
+
+
+@media (min-width: 768px) {
+  
+  .heroBackground {
+    padding-top: var(--spacing-6);
+    padding-bottom: var(--spacing-6);
+  }
+
+  .heroContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: var(--spacing-6);
+  }
+
+  .heroContent {
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+    max-width: 650px;
+  }
+
+  .techStack {
+    justify-content: flex-start;
+  }
+  
+  .heroAside {
+    flex-shrink: 0;
+  }
+
+  .heroImage {
+    width: 300px;
+    height: 300px;
+  }
+
+  .socialLinks a {
+    width: 60px;
+    height: 60px;
+    font-size: 1.75rem; /* 28px */
+  }
+}
