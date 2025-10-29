@@ -10,6 +10,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(4px);
+  animation: fadeInOverlay 0.2s ease-out;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modalContent {
@@ -19,16 +30,37 @@
   border-radius: var(--border-radius-lg);
   position: relative;
   width: 90%;
-  max-width: 450px; /* Limite de largura */
+  max-width: 450px;
   transform: scale(0.95);
   opacity: 0;
   animation: fadeIn 0.2s ease-out forwards;
 }
 
+.modalContainer {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Tema claro - Modal de contato */
+html:not([data-theme="dark"]) .modalContent {
+  background-color: var(--color-nav-background);
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Tema escuro - Modal de contato */
+html[data-theme="dark"] .modalContent {
+  background-color: var(--color-nav-background);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .modalContent h3 {
   text-align: center;
-  font-size: var(--font-size-md); /* 24px */
+  font-size: var(--font-size-md);
   margin-bottom: var(--spacing-4);
+  color: var(--color-text-nav);
 }
 
 .closeButton {
@@ -36,8 +68,28 @@
   top: var(--spacing-2);
   right: var(--spacing-2);
   color: var(--color-text-nav);
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   padding: var(--spacing-1);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-nav);
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .contactList {
@@ -63,10 +115,37 @@
   transform: scale(1.02);
 }
 
-/* Animação de Fade-in */
+/* Animação de Fade-in para modal de contato */
 @keyframes fadeIn {
   to {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Scrollbar personalizada para o modal */
+.modalContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tema claro - scrollbar */
+html:not([data-theme="dark"]) .modalContent::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+html:not([data-theme="dark"]) .modalContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
 }

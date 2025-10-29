@@ -13,14 +13,72 @@ const softSkillsData = [
 ];
 
 const hardSkillsData = [
-  { id: 'h1', title: 'React' },
-  { id: 'h2', title: 'JavaScript (ES6+)' },
-  { id: 'h3', title: 'Pop!_OS' },
-  { id: 'h4', title: 'HTML5' },
-  { id: 'h5', title: 'CSS3 / Sass' },
-  { id: 'h6', title: 'Git & GitHub' },
-  { id: 'h7', title: 'PostgreSQL' },
-  { id: 'h8', title: 'GameMaker' },
+  {
+    id: 'h1',
+    title: 'Front-End',
+    icons: ['react', 'angular', 'typescript', 'html5', 'css3', 'tailwind', 'materialize'],
+    description: `
+Frameworks e Bibliotecas: React, Angular
+UI Libraries: Tailwind CSS, Materialize, Angular Material
+Linguagens: TypeScript, JavaScript, HTML5, CSS3
+Boas práticas: componentização, responsividade, clean code e versionamento semântico.
+    `,
+  },
+  {
+    id: 'h2',
+    title: 'Back-End',
+    icons: ['java', 'springboot', 'python'],
+    description: `
+Linguagens: Java, Python
+Frameworks: Spring Boot, FastAPI / Flask
+Principais práticas: desenvolvimento de APIs RESTful, implementação de regras de negócio e segurança, integração com bancos de dados.
+Projetos: Sistema PDV (Spring Boot), automação via WhatsApp (Python).
+    `,
+  },
+  {
+    id: 'h3',
+    title: 'Banco de Dados',
+    icons: ['postgresql', 'mysql', 'mongodb'],
+    description: `
+SQL: PostgreSQL, MySQL
+NoSQL: MongoDB
+ORMs: Prisma, JPA/Hibernate
+Boas práticas: modelagem relacional, normalização, consultas otimizadas e versionamento de schema.
+    `,
+  },
+  {
+    id: 'h4',
+    title: 'DevOps & Infraestrutura',
+    icons: ['linux', 'github', 'aws', 'ci-cd'],
+    description: `
+Sistemas Operacionais: Linux (Pop!_OS — terminal, permissões e automações)
+CI/CD: GitHub Actions
+Versionamento: Git e GitHub (workflow profissional, commits semânticos)
+Cloud: Conceitos de AWS
+Outros: scripts de automação e deploy automatizado em VPS.
+    `,
+  },
+  {
+    id: 'h5',
+    title: 'IoT & Automação',
+    icons: ['arduino', 'python'],
+    description: `
+Hardware: Arduino (C/C++)
+Protocolos: HTTP, TCP/IP
+Projetos: Controle de climatização IoT (IFSP) e automação de envio de mensagens (Python + WhatsApp).
+    `,
+  },
+  {
+    id: 'h6',
+    title: 'Design & Ferramentas',
+    icons: ['illustrator', 'photoshop', 'figma', 'excel'],
+    description: `
+Design Gráfico: Adobe Illustrator (avançado), Photoshop (intermediário)
+UI/UX: Figma (protótipos e layouts responsivos)
+Produtividade: Excel avançado (incluindo automações com Python)
+Outros: GameMaker (prototipagem de ideias e lógicas de jogos).
+    `,
+  },
 ];
 
 export function Skills() {
@@ -111,7 +169,13 @@ export function Skills() {
         {/* === Grid de Skills === */}
         <div className={styles.skillsGrid}>
           {skillsToDisplay.map((skill) => (
-            <SkillCard key={skill.id} title={skill.title} />
+            <SkillCard
+              key={skill.id}
+              title={skill.title}
+              icons={skill.icons}
+              description={skill.description}
+              isHardSkill={activeTab === 'hard'}
+            />
           ))}
         </div>
       </section>
