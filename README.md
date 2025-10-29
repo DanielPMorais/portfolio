@@ -1,16 +1,89 @@
-# React + Vite
+# Portfólio — Daniel Morais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de portfólio construída com React + Vite, focada em desempenho, organização e UX. Inclui seções de apresentação, habilidades (soft e hard), projetos em destaque e outros projetos, contato e download de currículo.
 
-Currently, two official plugins are available:
+## ✨ Principais recursos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Tema claro/escuro com estilos adaptativos por seção e componentes
+- Seção Skills
+  - Soft-skills e hard-skills em abas com animação
+  - Cards clicáveis com efeito shimmer e modal dedicado
+  - Modais com conteúdo rico, responsivos e adaptados ao tema
+- Seção Projects
+  - Cards com imagem de capa acima do título
+  - Modal de projeto com carrossel de imagens e descrição
+  - Link externo “Visitar site” quando disponível
+  - Ícones da stack com contraste automático por tema
+- Componentes reutilizáveis e CSS Modules com variáveis globais
+- Padrões de commit e linting configurados
 
-## React Compiler
+## 🧰 Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + Vite
+- CSS Modules + variáveis globais (`src/styles/_variables.css`)
+- React Icons
+- ESLint, Prettier, Husky, Commitlint
 
-## Expanding the ESLint configuration
+## 🚀 Começando
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Pré-requisitos: Node.js 18+ e npm.
+
+Instalar dependências:
+
+```bash
+npm install
+```
+
+Rodar ambiente de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Build de produção:
+
+```bash
+npm run build
+```
+
+Pré-visualização do build:
+
+```bash
+npm run preview
+```
+
+## 📁 Estrutura relevante
+
+- `src/features/Hero/` — seção inicial, ícones com cor adaptativa ao tema
+- `src/features/Skills/` — abas de soft/hard skills, `SkillCard` com modal
+- `src/features/Projects/`
+  - `Projects.jsx` — listas de destaques e outros projetos
+  - `components/ProjectCard.jsx` — card com capa e badges/ícones de stack
+  - `components/ProjectModal.jsx` — modal com carrossel e link externo
+  - `components/ImageCarousel.jsx` — carrossel simples e responsivo
+- `src/components/common/Modal/` — modal genérico (usado no contato)
+- `src/styles/` — reset, globais e tokens (`_variables.css`)
+
+## 🧩 Como adicionar/editar projetos
+
+Edite `src/features/Projects/Projects.jsx` nas arrays:
+
+- `featuredProjectsData` (Destaques)
+- `otherProjectsData` (Outros projetos)
+
+Campos suportados por projeto:
+
+- `id`, `title`, `techs: string[]`, `cover?: string`, `images: string[]`, `description: string`, `url?: string`
+
+Observações:
+
+- O card usa `cover` como capa; se ausente, usa `images[0]`
+- O modal exibe um carrossel com `images` e, ao final, o link `url` (quando informado)
+
+## 🔗 Links úteis
+
+- Projeto Limas & Pacheco: `https://limaspacheco.vercel.app/`
+
+## 📜 Licença
+
+Uso pessoal/estudo. Ajuste conforme sua necessidade.
