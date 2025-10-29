@@ -12,38 +12,65 @@
   position: relative; /* Para posicionar o indicador */
 }
 
+
 .tabButton {
   font-size: var(--font-size-content);
-  /* 20px */
-  padding-bottom: var(--spacing-1);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  border: 2px solid transparent;
+  background: var(--color-card-background);
+  color: var(--color-text-body);
+  box-shadow: 0 2px 8px 0 rgba(33, 40, 51, 0.08);
   position: relative;
-  /* Botão inativo fica semi-transparente */
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
+  opacity: 0.85;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: 
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s,
+    opacity 0.2s;
 }
 
-.tabButton:hover {
+.tabButton:hover,
+.tabButton:focus {
   opacity: 1;
+  background: var(--color-background);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 16px 0 rgba(33, 40, 51, 0.16);
+  outline: none;
 }
 
-/* O botão que está ativo fica 100% opaco */
 .tabButton.activeTab {
   opacity: 1;
+  background: var(--color-text-body);
+  color: var(--color-background);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 16px 0 rgba(33, 40, 51, 0.18);
 }
 
-/* Indicador deslizante para as tabs */
-.tabSlideIndicator {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  background-color: var(--color-text-body);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 1px;
-  opacity: 0;
-  pointer-events: none; /* Para não interferir com cliques */
-  /* Garante que o indicador sempre seja visível */
-  min-width: 20px;
+html[data-theme="dark"] .tabButton {
+  background: var(--color-card-background);
+  color: var(--color-text-body);
+  box-shadow: 0 2px 8px 0 rgba(232, 241, 255, 0.08);
 }
+
+html[data-theme="dark"] .tabButton:hover,
+html[data-theme="dark"] .tabButton:focus {
+  background: var(--color-background);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 16px 0 rgba(232, 241, 255, 0.16);
+}
+
+html[data-theme="dark"] .tabButton.activeTab {
+  background: var(--color-text-body);
+  color: var(--color-background);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 16px 0 rgba(232, 241, 255, 0.18);
+}
+
+
 
 .skillsGrid {
   display: grid;

@@ -106,7 +106,6 @@ export function Skills() {
           </button>
 
           {/* Indicador deslizante */}
-          <div ref={indicatorRef} className={styles.tabSlideIndicator} style={{ opacity: 0 }} />
         </div>
 
         {/* === Grid de Skills === */}
