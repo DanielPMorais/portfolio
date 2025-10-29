@@ -9,8 +9,8 @@ export function About() {
 
   return (
     <>
-      <Container>
-        <section id="about-me" className={styles.aboutSection}>
+      <section id="about-me" className={styles.aboutSection}>
+        <Container>
           <div className={styles.aboutContainer}>
             {/* Coluna da Imagem */}
             <div className={styles.imageContainer}>
@@ -71,8 +71,8 @@ export function About() {
               </div>
             </div>
           </div>
-        </section>
-      </Container>
+        </Container>
+      </section>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );

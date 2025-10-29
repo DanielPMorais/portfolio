@@ -192,8 +192,8 @@ export function Skills() {
   }, [activeTab]);
 
   return (
-    <Container>
-      <section id="skills" className={styles.skillsSection}>
+    <section id="skills" className={styles.skillsSection}>
+      <Container>
         {/* === Botões de Tab === */}
         <div className={styles.tabsContainer} ref={tabsContainerRef}>
           <button
@@ -224,7 +224,7 @@ export function Skills() {
             />
           ))}
         </div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 }

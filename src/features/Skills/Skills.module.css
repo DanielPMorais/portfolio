@@ -15,7 +15,7 @@
 
 .tabButton {
   font-size: var(--font-size-content);
-  padding: 0.5rem 1.5rem;
+  padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--border-radius-md);
   border: 2px solid transparent;
   background: var(--color-card-background);
@@ -89,7 +89,7 @@ html[data-theme="dark"] .tabButton.activeTab {
 
   .skillsGrid {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 900px;
+    max-width: 1024px;
     gap: var(--spacing-4);
   }
 }

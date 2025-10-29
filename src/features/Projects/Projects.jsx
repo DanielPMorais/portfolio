@@ -18,8 +18,8 @@ const allProjectsData = [
 
 export function Projects() {
   return (
-    <Container>
-      <section id="projects" className={styles.projectsSection}>
+    <section id="projects" className={styles.projectsSection}>
+      <Container>
         {/* Subseção Destaques */}
         <h3 className={styles.sectionSubtitle}>Destaques</h3>
         <div className={`${styles.projectGrid} ${styles.featuredGrid}`}>
@@ -35,7 +35,7 @@ export function Projects() {
             <ProjectCard key={project.id} title={project.title} techs={project.techs} />
           ))}
         </div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 }
