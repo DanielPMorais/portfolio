@@ -9,15 +9,19 @@ import conectur3 from '../../assets/images/conectur/ct-event.webp';
 import conectur4 from '../../assets/images/conectur/ct-gamification.webp';
 import conectur5 from '../../assets/images/conectur/ct-profile.webp';
 import limasPachecoCover from '../../assets/images/limaspacheco/lp-cover.webp';
-import limasPacheco1 from '../../assets/images/limaspacheco/lp-port.webp';
-import limasPacheco2 from '../../assets/images/limaspacheco/lp-port-modal.webp';
-import limasPacheco3 from '../../assets/images/limaspacheco/lp-CTA.webp';
-import limasPacheco4 from '../../assets/images/limaspacheco/lp-contact.webp';
+import limasPacheco1 from '../../assets/images/limaspacheco/lp-home.webp';
+import limasPacheco2 from '../../assets/images/limaspacheco/lp-port.webp';
+import limasPacheco3 from '../../assets/images/limaspacheco/lp-port-modal.webp';
+import limasPacheco4 from '../../assets/images/limaspacheco/lp-CTA.webp';
+import limasPacheco5 from '../../assets/images/limaspacheco/lp-contact.webp';
 import fitTrackCover from '../../assets/images/fittrack/ft-cover.webp';
 import fitTrack1 from '../../assets/images/fittrack/ft-home.webp';
 import fitTrack2 from '../../assets/images/fittrack/ft-workouts.webp';
 import fitTrack3 from '../../assets/images/fittrack/ft-workouts-2.webp';
 import fitTrack4 from '../../assets/images/fittrack/ft-workout.webp';
+import portfolioCover from '../../assets/images/portfolio/pf-cover.webp';
+import portfolio1 from '../../assets/images/portfolio/pf-projects.webp';
+import portfolio2 from '../../assets/images/portfolio/pf-skills.webp';
 
 const featuredProjectsData = [
   {
@@ -41,10 +45,10 @@ Na documentação, organizei a arquitetura do sistema, produzi diagramas (Casos 
   },
   {
     id: 2,
-    title: 'Limas Pacheco',
+    title: 'Limas & Pacheco',
     techs: ['vite', 'typescript', 'react', 'tailwind'],
     cover: limasPachecoCover,
-    images: [limasPachecoCover, limasPacheco1, limasPacheco2, limasPacheco3, limasPacheco4],
+    images: [limasPacheco1, limasPacheco2, limasPacheco3, limasPacheco4, limasPacheco5],
     description: `
 O Limas Pacheco é um website institucional moderno e responsivo desenvolvido para uma empresa especializada em eventos e celebrações. 
 O projeto foi construído com tecnologias web atuais, oferecendo uma navegação fluida e visual profissional.
@@ -71,11 +75,72 @@ Enquanto a API RESTful em PHP é finalizada, o sistema consome dados fictícios 
   },
 ];
 
+// TODO: Adicionar os projetos artesaos, landing cardapio, quickorder, portfolio, contador de dias, games, aula gamemaker, arduino; aqui
 const otherProjectsData = [
-  { id: 4, title: 'Projeto 4', techs: ['js', 'java', 'sass', 'tailwind'] },
-  { id: 5, title: 'Projeto 5', techs: ['js', 'java', 'sass', 'tailwind'] },
-  { id: 6, title: 'Projeto 6', techs: ['js', 'java', 'sass', 'tailwind'] },
-  { id: 7, title: 'Projeto 7', techs: ['js', 'java', 'sass', 'tailwind'] },
+  {
+    id: 4,
+    title: 'Portfólio Pessoal',
+    techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
+    images: [portfolioCover, portfolio1, portfolio2],
+    description: `
+Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+
+O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+
+Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+
+Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
+    `,
+    url: 'https://danielpmorais.vercel.app/',
+  },
+  //   {
+  //     id: 5,
+  //     title: 'Portfólio Pessoal',
+  //     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
+  //     images: [portfolioCover, portfolio1, portfolio2],
+  //     description: `
+  // Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+
+  // O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+
+  // Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+
+  // Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
+  //     `,
+  //     url: 'https://danielpmorais.vercel.app/',
+  //   },
+  //   {
+  //     id: 6,
+  //     title: 'Portfólio Pessoal',
+  //     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
+  //     images: [portfolioCover, portfolio1, portfolio2],
+  //     description: `
+  // Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+
+  // O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+
+  // Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+
+  // Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
+  //     `,
+  //     url: 'https://danielpmorais.vercel.app/',
+  //   },
+  //   {
+  //     id: 7,
+  //     title: 'Portfólio Pessoal',
+  //     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
+  //     images: [portfolioCover, portfolio1, portfolio2],
+  //     description: `
+  // Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+
+  // O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+
+  // Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+
+  // Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
+  //     `,
+  //     url: 'https://danielpmorais.vercel.app/',
+  //   },
 ];
 
 export function Projects() {
@@ -103,7 +168,15 @@ export function Projects() {
         <h3 className={styles.sectionSubtitle}>Outros projetos</h3>
         <div className={`${styles.projectGrid} ${styles.allGrid}`}>
           {otherProjectsData.map((project) => (
-            <ProjectCard key={project.id} title={project.title} techs={project.techs} />
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              techs={project.techs}
+              cover={project.cover || (project.images && project.images[0])}
+              images={project.images}
+              description={project.description}
+              url={project.url}
+            />
           ))}
         </div>
       </Container>
