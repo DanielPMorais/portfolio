@@ -25,13 +25,13 @@
   font-weight: var(--font-weight-medium);
 }
 
-.hardSkillCard {
+.clickableCard {
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-.hardSkillCard::before {
+.clickableCard::before {
   content: '';
   position: absolute;
   top: 0;
@@ -42,12 +42,21 @@
   transition: left 0.5s ease;
 }
 
-.hardSkillCard:hover::before {
+.clickableCard:hover::before {
   left: 100%;
 }
 
-.hardSkillCard:hover {
+.clickableCard:hover {
   transform: scale(1.05);
+  border-color: var(--color-primary);
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .clickableCard::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+html:not([data-theme="dark"]) .clickableCard:hover {
   border-color: var(--color-primary);
 }
 

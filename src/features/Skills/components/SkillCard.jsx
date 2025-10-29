@@ -4,11 +4,11 @@ import { SkillIcons } from './SkillIcons';
 import { SkillModal } from './SkillModal';
 import { FaTimes } from 'react-icons/fa';
 
-export function SkillCard({ title, icons, description, isHardSkill = false }) {
+export function SkillCard({ title, icons, description = false }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCardClick = () => {
-    if (isHardSkill && description) {
+    if (description) {
       setIsModalOpen(true);
     }
   };
@@ -20,15 +20,15 @@ export function SkillCard({ title, icons, description, isHardSkill = false }) {
   return (
     <>
       <div
-        className={`${styles.skillCard} ${isHardSkill ? styles.hardSkillCard : ''}`}
+        className={`${styles.skillCard} ${description ? styles.clickableCard : ''}`}
         onClick={handleCardClick}
-        style={{ cursor: isHardSkill && description ? 'pointer' : 'default' }}
+        style={{ cursor: description ? 'pointer' : 'default' }}
       >
         <h3>{title}</h3>
         {icons && <SkillIcons icons={icons} />}
       </div>
 
-      {isHardSkill && description && (
+      {description && (
         <SkillModal isOpen={isModalOpen} onClose={handleCloseModal}>
           <div className={styles.skillModalContent}>
             <button

@@ -4,12 +4,60 @@ import { Container } from '../../components/layout/Container/Container';
 import { SkillCard } from './components/SkillCard';
 
 const softSkillsData = [
-  { id: 's1', title: 'Comunicação' },
-  { id: 's2', title: 'Trabalho em Equipe' },
-  { id: 's3', title: 'Proatividade' },
-  { id: 's4', title: 'Gestão de Tempo' },
-  { id: 's5', title: 'Criatividade' },
-  { id: 's6', title: 'Liderança' },
+  {
+    id: 's1',
+    title: 'Proatividade',
+    description: `
+Aprendo novas tecnologias de forma autodidata, como Python, React e CI/CD. 
+Identifico problemas e crio soluções próprias, como automações e ferramentas internas. 
+Gosto de tomar iniciativa e manter constância nos meus projetos, sem depender de instruções externas.
+    `,
+  },
+  {
+    id: 's2',
+    title: 'Criatividade',
+    description: `
+Gosto de desenvolver ideias originais e funcionais, como o FitTrack e o sistema de climatização IoT. 
+Tenho facilidade em criar interfaces e soluções com foco na experiência do usuário e no impacto prático. 
+Busco sempre novas formas de resolver problemas de maneira eficiente e elegante.
+    `,
+  },
+  {
+    id: 's3',
+    title: 'Resolução de Problemas',
+    description: `
+Tenho facilidade em identificar falhas e propor soluções rápidas e eficazes. 
+Aplico raciocínio lógico e pensamento analítico em diferentes contextos, desde TI até desenvolvimento full-stack. 
+Aprendo com os erros e uso feedbacks para aprimorar constantemente meu trabalho.
+    `,
+  },
+  {
+    id: 's4',
+    title: 'Trabalho em Equipe',
+    description: `
+Gosto de colaborar em times ágeis e hackathons, mantendo uma comunicação clara e respeitosa. 
+Valorizo o compartilhamento de conhecimento e acredito que boas ideias surgem quando pessoas pensam juntas. 
+Sei ouvir, contribuir e me adaptar às necessidades do grupo.
+    `,
+  },
+  {
+    id: 's5',
+    title: 'Organização',
+    description: `
+Sou uma pessoa estruturada e gosto de manter meus projetos bem organizados e documentados. 
+Costumo planejar tarefas, prazos e prioridades antes de começar a execução. 
+Prezo pela consistência do código, clareza nos commits e entregas com qualidade.
+    `,
+  },
+  {
+    id: 's6',
+    title: 'Aprendizado Contínuo',
+    description: `
+Estou sempre estudando novas tecnologias e ferramentas para melhorar meus resultados. 
+Evoluí de suporte técnico para desenvolvimento full-stack com base em curiosidade, disciplina e prática. 
+Tenho o hábito de transformar o que aprendo em projetos reais e aplicáveis.
+    `,
+  },
 ];
 
 const hardSkillsData = [
@@ -83,7 +131,7 @@ Outros: GameMaker (prototipagem de ideias e lógicas de jogos).
 
 export function Skills() {
   // O estado 'soft' ou 'hard'
-  const [activeTab, setActiveTab] = useState('soft');
+  const [activeTab, setActiveTab] = useState('hard');
   const tabsContainerRef = useRef(null);
   const indicatorRef = useRef(null);
 
@@ -149,21 +197,19 @@ export function Skills() {
         {/* === Botões de Tab === */}
         <div className={styles.tabsContainer} ref={tabsContainerRef}>
           <button
-            // Aplica a classe .activeTab dinamicamente
-            className={`${styles.tabButton} ${activeTab === 'soft' ? styles.activeTab : ''}`}
-            onClick={() => setActiveTab('soft')}
-          >
-            Soft-Skills
-          </button>
-
-          <button
             className={`${styles.tabButton} ${activeTab === 'hard' ? styles.activeTab : ''}`}
             onClick={() => setActiveTab('hard')}
           >
             Hard-Skills
           </button>
 
-          {/* Indicador deslizante */}
+          <button
+            // Aplica a classe .activeTab dinamicamente
+            className={`${styles.tabButton} ${activeTab === 'soft' ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab('soft')}
+          >
+            Soft-Skills
+          </button>
         </div>
 
         {/* === Grid de Skills === */}
