@@ -1,0 +1,21 @@
+.skillCard {
+  background-color: var(--color-nav-background); 
+  color: var(--color-text-nav); 
+  
+  border-radius: var(--border-radius-md);
+  /* aspect-ratio garante que seja um quadrado perfeito */
+  aspect-ratio: 1 / 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-2);
+  
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.skillCard:hover {
+  transform: scale(1.05);
+}

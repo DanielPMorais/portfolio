@@ -46,6 +46,38 @@ export function Header({ activeSection }) {
     }
   }, [activeSection]);
 
+  // Recalcula posição quando a janela é redimensionada
+  useEffect(() => {
+    const handleResize = () => {
+      if (!navListRef.current || !indicatorRef.current || !activeSection) return;
+
+      const activeLink = navListRef.current.querySelector(`.${styles.activeLink}`);
+
+      if (activeLink) {
+        const navListRect = navListRef.current.getBoundingClientRect();
+        const activeLinkRect = activeLink.getBoundingClientRect();
+
+        const left = activeLinkRect.left - navListRect.left;
+        const width = activeLinkRect.width;
+
+        indicatorRef.current.style.left = `${left}px`;
+        indicatorRef.current.style.width = `${width}px`;
+      }
+    };
+
+    // Adiciona listener para resize
+    window.addEventListener('resize', handleResize);
+
+    // Recalcula após o primeiro render
+    const timer = setTimeout(handleResize, 100);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(timer);
+    };
+  }, [activeSection]);
+
   return (
     <header
       className={`${styles.navbar} ${styles.navbarFixed} ${isMobileMenuOpen ? styles.isNavOpen : ''}`}

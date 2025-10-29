@@ -1,0 +1,68 @@
+.skillsSection {
+  padding-top: var(--spacing-6);
+  padding-bottom: var(--spacing-6);
+}
+
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  /* Espaço entre os dois botões */
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  position: relative; /* Para posicionar o indicador */
+}
+
+.tabButton {
+  font-size: var(--font-size-content);
+  /* 20px */
+  padding-bottom: var(--spacing-1);
+  position: relative;
+  /* Botão inativo fica semi-transparente */
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.tabButton:hover {
+  opacity: 1;
+}
+
+/* O botão que está ativo fica 100% opaco */
+.tabButton.activeTab {
+  opacity: 1;
+}
+
+/* Indicador deslizante para as tabs */
+.tabSlideIndicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--color-text-body);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+  opacity: 0;
+  pointer-events: none; /* Para não interferir com cliques */
+  /* Garante que o indicador sempre seja visível */
+  min-width: 20px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-3);
+  max-width: 600px;
+  margin: 0 auto;
+  /* Centraliza o grid */
+}
+
+@media (min-width: 768px) {
+  .tabButton {
+    font-size: var(--font-size-md);
+    /* 24px */
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    gap: var(--spacing-4);
+  }
+}
