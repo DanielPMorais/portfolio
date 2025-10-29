@@ -76,6 +76,9 @@
   /* Outros */
   --border-radius-md: 8px;
   --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-xxl: 32px;
+  --border-radius-xxxl: 40px;
 }
 
 /* ================================================== */

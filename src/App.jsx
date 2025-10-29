@@ -3,6 +3,7 @@ import { Hero } from './features/Hero/Hero';
 import { Projects } from './features/Projects/Projects';
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { Skills } from './features/Skills/Skills';
+import { About } from './features/About/About';
 
 function App() {
   const sectionIds = ['home', 'projects', 'skills', 'about-me'];
@@ -19,9 +20,7 @@ function App() {
         <Hero />
         <Projects />
         <Skills />
-        {/* Próximos passos:
-        <Contact />
-        */}
+        <About />
       </main>
 
       {/* <Footer /> */}
