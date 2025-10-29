@@ -2,14 +2,34 @@
   background-color: var(--color-card-background);
   padding: var(--spacing-4);
   border-radius: var(--border-radius-lg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: left;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease;
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .projectCard {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: transparent;
+}
+
+html:not([data-theme="dark"]) .projectCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .projectCard {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .projectCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .projectCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .projectCard h4 {

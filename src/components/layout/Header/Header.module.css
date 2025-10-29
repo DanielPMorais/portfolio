@@ -105,14 +105,66 @@
 }
 
 .themeToggle {
+  display: flex;
+  align-items: center;
   z-index: 120;
 }
 
-.themeToggle button {
+/* Botão switch estilo iOS */
+.toggleSwitch {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggleTrack {
+  width: 52px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 13px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.toggleTrack:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.toggleTrackActive {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.toggleThumb {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-text-nav);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggleThumbActive {
+  transform: translateX(26px);
+  background-color: var(--color-nav-background);
+}
+
+.toggleIcon {
+  font-size: 10px;
+  color: var(--color-nav-background);
+  transition: color 0.3s ease;
+}
+
+.toggleThumbActive .toggleIcon {
   color: var(--color-text-nav);
-  background-color: var(--color-icon-background);
-  padding: var(--spacing-1);
-  border-radius: var(--border-radius-md);
 }
 
 

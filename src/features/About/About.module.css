@@ -65,21 +65,67 @@
   font-weight: var(--font-weight-medium);
   font-family: var(--font-family-ui);
   text-align: center;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-3px);
 }
 
-.primaryButton {
+/* Botão primário - modo claro */
+html:not([data-theme="dark"]) .primaryButton {
   background-color: var(--color-nav-background);
   color: var(--color-text-nav);
+  border-color: var(--color-nav-background);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.secondaryButton {
+html:not([data-theme="dark"]) .primaryButton:hover {
+  background-color: var(--color-text-body);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão secundário - modo claro */
+html:not([data-theme="dark"]) .secondaryButton {
+  background-color: transparent;
+  color: var(--color-nav-background);
+  border-color: var(--color-nav-background);
+}
+
+html:not([data-theme="dark"]) .secondaryButton:hover {
   background-color: var(--color-nav-background);
   color: var(--color-text-nav);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão primário - modo escuro */
+html[data-theme="dark"] .primaryButton {
+  background-color: var(--color-text-body);
+  color: var(--color-background);
+  border-color: var(--color-text-body);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .primaryButton:hover {
+  background-color: var(--color-background);
+  color: var(--color-text-body);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Botão secundário - modo escuro */
+html[data-theme="dark"] .secondaryButton {
+  background-color: transparent;
+  color: var(--color-text-body);
+  border-color: var(--color-text-body);
+}
+
+html[data-theme="dark"] .secondaryButton:hover {
+  background-color: var(--color-text-body);
+  color: var(--color-background);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* ================================== */

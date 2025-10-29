@@ -15,9 +15,6 @@
   /* Cores de Fundo */
   --color-background: var(--raw-color-light-blue);
   --color-nav-background: var(--raw-color-dark-surface);
-  --color-icon-background: var(--raw-color-dark-surface);
-  --color-icon-hover-background: var(--raw-color-light-blue);
-  --color-icon-hover-background-2: var(--raw-color-dark-blue);
   --color-carousel-background: var(--raw-color-light-surface);
   --color-card-background: var(--raw-color-light-surface);
 
@@ -92,8 +89,8 @@ html[data-theme="dark"] {
   /* Cores de Fundo */
   --color-background: var(--raw-color-dark-surface);
   --color-nav-background: var(--raw-color-dark-blue);
-  --color-icon-background: var(--raw-color-light-surface);
   --color-carousel-background: var(--raw-color-dark-blue);
+  --color-card-background: var(--raw-color-dark-blue);
 
   /* Cores de Texto */
   --color-text-body: var(--raw-color-light-blue);

@@ -2,12 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Header.module.css';
 import { HiMenu } from 'react-icons/hi';
 import { CgClose } from 'react-icons/cg';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { Container } from '../Container/Container';
+import { useTheme } from '../../../hooks/useTheme';
 
 export function Header({ activeSection }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navListRef = useRef(null);
   const indicatorRef = useRef(null);
+
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -120,7 +124,25 @@ export function Header({ activeSection }) {
 
         {/* Theme toggle à direita (mobile e desktop) */}
         <div className={styles.themeToggle}>
-          <button aria-label="Mudar tema">(Toggle)</button>
+          <button
+            className={styles.toggleSwitch}
+            onClick={toggleTheme}
+            aria-label={theme === 'light' ? 'Mudar para tema escuro' : 'Mudar para tema claro'}
+          >
+            <div
+              className={`${styles.toggleTrack} ${theme === 'dark' ? styles.toggleTrackActive : ''}`}
+            >
+              <div
+                className={`${styles.toggleThumb} ${theme === 'dark' ? styles.toggleThumbActive : ''}`}
+              >
+                {theme === 'dark' ? (
+                  <FaSun className={styles.toggleIcon} />
+                ) : (
+                  <FaMoon className={styles.toggleIcon} />
+                )}
+              </div>
+            </div>
+          </button>
         </div>
       </Container>
 

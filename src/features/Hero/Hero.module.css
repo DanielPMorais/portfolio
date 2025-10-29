@@ -26,7 +26,6 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-color: var(--color-icon-background);
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -54,30 +53,63 @@
   align-items: center;
   width: 50px;
   height: 50px;
-  background-color: var(--color-icon-background);
-  color: var(--color-text-nav);
   border-radius: 50%;
   font-size: 1.5rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Tema claro - mais destaque */
+html:not([data-theme="dark"]) .socialLinks a {
+  background-color: var(--color-nav-background);
+  color: var(--color-text-nav);
+  border: 1px solid var(--color-nav-background);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+html:not([data-theme="dark"]) .socialLinks a:hover {
+  background-color: var(--color-text-body);
+  border-color: var(--color-text-body);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+html:not([data-theme="dark"]) .socialLinks a .icon {
+  color: var(--color-text-nav);
+}
+
+html:not([data-theme="dark"]) .socialLinks a:hover .icon {
+  color: var(--color-background);
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .socialLinks a {
+  background-color: var(--color-card-background);
+  color: var(--color-text-body);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .socialLinks a:hover {
+  background-color: var(--color-text-body);
+  border-color: var(--color-text-body);
+}
+
+html[data-theme="dark"] .socialLinks a .icon {
+  color: var(--color-text-body);
+}
+
+html[data-theme="dark"] .socialLinks a:hover .icon {
+  color: var(--color-background);
 }
 
 .socialLinks a:hover {
   transform: scale(1.1);
-  background-color: var(--color-icon-hover-background, var(--color-icon-background));
 }
 
 .icon {
   transition: color 0.15s ease, fill 0.15s ease;
-  color: var(--color-text-nav);
   font-size: 1.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.socialLinks a:hover .icon {
-  color: var(--color-icon-hover-background-2);
-  fill: var(--color-icon-hover-background-2);
 }
 
 
