@@ -1,0 +1,120 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 60vh;
+  overflow: hidden;
+  border-radius: var(--border-radius-md);
+  background: var(--color-card-background);
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carouselButton:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevButton {
+  left: var(--spacing-2);
+}
+
+.nextButton {
+  right: var(--spacing-2);
+}
+
+.indicators {
+  position: absolute;
+  bottom: var(--spacing-2);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--spacing-1);
+  z-index: 10;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .carouselButton {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-primary);
+}
+
+html:not([data-theme="dark"]) .carouselButton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+html:not([data-theme="dark"]) .indicator {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+html:not([data-theme="dark"]) .indicator.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+html:not([data-theme="dark"]) .indicator:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}

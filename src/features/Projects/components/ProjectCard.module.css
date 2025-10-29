@@ -1,10 +1,13 @@
 .projectCard {
   background-color: var(--color-card-background);
-  padding: var(--spacing-4);
+  padding: 0;
   border-radius: var(--border-radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: left;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Tema claro */
@@ -32,15 +35,240 @@ html[data-theme="dark"] .projectCard:hover {
   transform: translateY(-5px);
 }
 
+.coverImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--color-card-background);
+}
+
+.coverImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.clickableCard {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.clickableCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.clickableCard:hover::before {
+  left: 100%;
+}
+
+.clickableCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+}
+
+.clickableCard:hover .coverImage img {
+  transform: scale(1.05);
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .clickableCard::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+}
+
+html:not([data-theme="dark"]) .clickableCard:hover {
+  border-color: var(--color-primary);
+}
+
 .projectCard h4 {
-  font-size: var(--font-size-content); /* 20px */
+  font-size: var(--font-size-content);
   font-weight: var(--font-weight-medium);
-  margin-bottom: var(--spacing-3);
+  margin: var(--spacing-3) var(--spacing-4) var(--spacing-2) var(--spacing-4);
+  color: var(--color-text-primary);
 }
 
 .cardTechs {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-2);
-  font-size: var(--font-size-md); /* 24px */
+  padding: 0 var(--spacing-4) var(--spacing-4) var(--spacing-4);
   align-items: center;
+}
+
+.techIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-1);
+  transition: transform 0.2s ease;
+}
+
+.techIcon:hover {
+  transform: scale(1.2);
+}
+
+.techIcon svg {
+  width: 20px;
+  height: 20px;
+  transition: color 0.2s ease, fill 0.2s ease;
+}
+
+/* Cores baseadas no tema - Tema Claro */
+html:not([data-theme="dark"]) .techIcon_react svg,
+html:not([data-theme="dark"]) .techIcon_react svg * { fill: #00A8CC; }
+
+html:not([data-theme="dark"]) .techIcon_angular svg,
+html:not([data-theme="dark"]) .techIcon_angular svg * { fill: #C3002F; }
+
+html:not([data-theme="dark"]) .techIcon_typescript svg,
+html:not([data-theme="dark"]) .techIcon_typescript svg * { fill: #005A9C; }
+
+html:not([data-theme="dark"]) .techIcon_javascript svg,
+html:not([data-theme="dark"]) .techIcon_javascript svg * { fill: #CCAC00; }
+
+html:not([data-theme="dark"]) .techIcon_vite svg,
+html:not([data-theme="dark"]) .techIcon_vite svg * { fill: #4C4FE8; }
+
+html:not([data-theme="dark"]) .techIcon_tailwind svg,
+html:not([data-theme="dark"]) .techIcon_tailwind svg * { fill: #06A5B9; }
+
+html:not([data-theme="dark"]) .techIcon_css svg,
+html:not([data-theme="dark"]) .techIcon_css svg * { fill: #0F5C93; }
+
+html:not([data-theme="dark"]) .techIcon_node svg,
+html:not([data-theme="dark"]) .techIcon_node svg * { fill: #267A26; }
+
+html:not([data-theme="dark"]) .techIcon_express svg,
+html:not([data-theme="dark"]) .techIcon_express svg * { fill: #333333; }
+
+html:not([data-theme="dark"]) .techIcon_api_rest svg,
+html:not([data-theme="dark"]) .techIcon_api_rest svg * { fill: #CC3300; }
+
+html:not([data-theme="dark"]) .techIcon_php svg,
+html:not([data-theme="dark"]) .techIcon_php svg * { fill: #5B6FA3; }
+
+html:not([data-theme="dark"]) .techIcon_mysql svg,
+html:not([data-theme="dark"]) .techIcon_mysql svg * { fill: #325882; }
+
+html:not([data-theme="dark"]) .techIcon_prisma svg,
+html:not([data-theme="dark"]) .techIcon_prisma svg * { fill: #1A202C; }
+
+html:not([data-theme="dark"]) .techIcon_react_native svg,
+html:not([data-theme="dark"]) .techIcon_react_native svg * { fill: #4DB8D7; }
+
+html:not([data-theme="dark"]) .techIcon_figma svg,
+html:not([data-theme="dark"]) .techIcon_figma svg * { fill: #C02A14; }
+
+html:not([data-theme="dark"]) .techIcon_eslint svg,
+html:not([data-theme="dark"]) .techIcon_eslint svg * { fill: #3B2C8C; }
+
+html:not([data-theme="dark"]) .techIcon_prettier svg,
+html:not([data-theme="dark"]) .techIcon_prettier svg * { fill: #C88F00; }
+
+html:not([data-theme="dark"]) .techIcon_aws svg,
+html:not([data-theme="dark"]) .techIcon_aws svg * { fill: #CC7A00; }
+
+html:not([data-theme="dark"]) .techIcon_bcrypt svg,
+html:not([data-theme="dark"]) .techIcon_bcrypt svg * { fill: #333333; }
+
+html:not([data-theme="dark"]) .techIcon_cors svg,
+html:not([data-theme="dark"]) .techIcon_cors svg * { fill: #333333; }
+
+html:not([data-theme="dark"]) .techIcon_zod svg,
+html:not([data-theme="dark"]) .techIcon_zod svg * { fill: #2B4DB8; }
+
+/* Cores baseadas no tema - Tema Escuro */
+html[data-theme="dark"] .techIcon_react svg,
+html[data-theme="dark"] .techIcon_react svg * { fill: #61DAFB; }
+
+html[data-theme="dark"] .techIcon_angular svg,
+html[data-theme="dark"] .techIcon_angular svg * { fill: #DD0031; }
+
+html[data-theme="dark"] .techIcon_typescript svg,
+html[data-theme="dark"] .techIcon_typescript svg * { fill: #3178C6; }
+
+html[data-theme="dark"] .techIcon_javascript svg,
+html[data-theme="dark"] .techIcon_javascript svg * { fill: #F7DF1E; }
+
+html[data-theme="dark"] .techIcon_vite svg,
+html[data-theme="dark"] .techIcon_vite svg * { fill: #646CFF; }
+
+html[data-theme="dark"] .techIcon_tailwind svg,
+html[data-theme="dark"] .techIcon_tailwind svg * { fill: #38BDF8; }
+
+html[data-theme="dark"] .techIcon_css svg,
+html[data-theme="dark"] .techIcon_css svg * { fill: #1572B6; }
+
+html[data-theme="dark"] .techIcon_node svg,
+html[data-theme="dark"] .techIcon_node svg * { fill: #339933; }
+
+html[data-theme="dark"] .techIcon_express svg,
+html[data-theme="dark"] .techIcon_express svg * { fill: #FFFFFF; }
+
+html[data-theme="dark"] .techIcon_api_rest svg,
+html[data-theme="dark"] .techIcon_api_rest svg * { fill: #FF6B6B; }
+
+html[data-theme="dark"] .techIcon_php svg,
+html[data-theme="dark"] .techIcon_php svg * { fill: #8993C1; }
+
+html[data-theme="dark"] .techIcon_mysql svg,
+html[data-theme="dark"] .techIcon_mysql svg * { fill: #4479A1; }
+
+html[data-theme="dark"] .techIcon_prisma svg,
+html[data-theme="dark"] .techIcon_prisma svg * { fill: #4A5568; }
+
+html[data-theme="dark"] .techIcon_react_native svg,
+html[data-theme="dark"] .techIcon_react_native svg * { fill: #61DAFB; }
+
+html[data-theme="dark"] .techIcon_figma svg,
+html[data-theme="dark"] .techIcon_figma svg * { fill: #F24E1E; }
+
+html[data-theme="dark"] .techIcon_eslint svg,
+html[data-theme="dark"] .techIcon_eslint svg * { fill: #4B32C3; }
+
+html[data-theme="dark"] .techIcon_prettier svg,
+html[data-theme="dark"] .techIcon_prettier svg * { fill: #F7B93E; }
+
+html[data-theme="dark"] .techIcon_aws svg,
+html[data-theme="dark"] .techIcon_aws svg * { fill: #FF9900; }
+
+html[data-theme="dark"] .techIcon_bcrypt svg,
+html[data-theme="dark"] .techIcon_bcrypt svg * { fill: #CCCCCC; }
+
+html[data-theme="dark"] .techIcon_cors svg,
+html[data-theme="dark"] .techIcon_cors svg * { fill: #CCCCCC; }
+
+html[data-theme="dark"] .techIcon_zod svg,
+html[data-theme="dark"] .techIcon_zod svg * { fill: #5B7FFF; }
+
+.techBadge {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--color-card-background);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  color: var(--color-text-body);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .techBadge {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .techBadge {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
 }
