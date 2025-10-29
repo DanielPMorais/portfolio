@@ -4,6 +4,7 @@ import { Projects } from './features/Projects/Projects';
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { Skills } from './features/Skills/Skills';
 import { About } from './features/About/About';
+import { Footer } from './components/layout/Footer/Footer';
 
 function App() {
   const sectionIds = ['home', 'projects', 'skills', 'about-me'];
@@ -23,7 +24,7 @@ function App() {
         <About />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
