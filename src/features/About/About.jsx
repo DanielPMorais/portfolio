@@ -25,15 +25,32 @@ export function About() {
 
               {/* --- Texto Único --- */}
               <p>
-                Sou um estudante de Análise e Desenvolvimento de Sistemas com 23 anos, apaixonado
-                por tecnologia e sempre em busca de novas oportunidades para expandir meus
-                conhecimentos.
+                Sou <b>Daniel Patrick de Morais</b>, estudante de{' '}
+                <b>Análise e Desenvolvimento de Sistemas</b> no IFSP e desenvolvedor apaixonado por
+                tecnologia e aprendizado contínuo.
                 <br />
                 <br />
-                Durante os últimos 3 anos, atuei como Assistente de T.I., onde tive a oportunidade
-                de desenvolver minhas habilidades técnicas e aprender a trabalhar de forma eficiente
-                em equipe. Minha experiência inclui suporte técnico, manutenção de sistemas e
-                implementação de soluções tecnológicas para otimizar processos.
+                Minha trajetória começou na área administrativa e de suporte de TI na <b>Ambev</b>,
+                onde aprimorei minha capacidade de resolver problemas, entender processos de negócio
+                e propor soluções práticas. Essa vivência despertou em mim o desejo de criar
+                ferramentas que otimizassem o trabalho das pessoas — e foi assim que encontrei no
+                <b>desenvolvimento de software</b> o meu caminho profissional.
+                <br />
+                <br />
+                Hoje, atuo como <b>desenvolvedor full stack</b>, com foco em{' '}
+                <b>Java (Spring Boot)</b> no backend e <b>Angular</b> e <b>React</b> no frontend.
+                Também tenho experiência com{' '}
+                <b>Python, PostgreSQL, MongoDB, Tailwind e GitHub Actions</b>, além de interesse
+                crescente por <b>DevOps e IoT</b>.
+                <br />
+                <br />
+                Em 2025, fui premiado em <b>2º lugar em um hackathon de 50 horas</b>, onde contribuí
+                no desenvolvimento de uma aplicação voltada ao turismo local — uma experiência que
+                reforçou minha paixão por criar soluções colaborativas e funcionais.
+                <br />
+                <br />
+                Tenho como valores a <b>proatividade, criatividade e aprendizado constante</b>.
+                Busco sempre unir técnica, propósito e impacto real em cada projeto que desenvolvo.
               </p>
 
               {/* Botões */}

@@ -14,8 +14,8 @@
 }
 
 .aboutImage {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -140,8 +140,8 @@ html[data-theme="dark"] .secondaryButton:hover {
   }
 
   .aboutImage {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
 
   .aboutContent {
