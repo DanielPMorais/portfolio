@@ -36,7 +36,7 @@ const techIcons = [
   { name: 'React', icon: <FaReact size={40} style={{ color: '#00D8FF' }} /> },
   { name: 'Angular', icon: <FaAngular size={42} style={{ color: '#DD0031' }} /> },
   { name: 'TypeScript', icon: <SiTypescript size={38} style={{ color: '#007ACC' }} /> },
-  { name: 'JavaScript', icon: <IoLogoJavascript size={40} style={{ color: '#F0DB4F' }} /> },
+  { name: 'JavaScript', icon: <IoLogoJavascript size={40} className={styles.javascriptIcon} /> },
   { name: 'HTML5', icon: <FaHtml5 size={40} style={{ color: '#E34F26' }} /> },
   { name: 'CSS3', icon: <FaCss3Alt size={40} style={{ color: '#1572B6' }} /> },
   { name: 'TailwindCSS', icon: <SiTailwindcss size={40} style={{ color: '#38BDF8' }} /> },
@@ -52,8 +52,8 @@ const techIcons = [
   { name: 'MongoDB', icon: <SiMongodb size={40} style={{ color: '#47A248' }} /> },
 
   // DevOps & Infraestrutura
-  { name: 'Linux', icon: <FaLinux size={40} style={{ color: '#FCC624' }} /> },
-  { name: 'GitHub', icon: <FaGithub size={40} style={{ color: '#181717' }} /> },
+  { name: 'Linux', icon: <FaLinux size={40} className={styles.linuxIcon} /> },
+  { name: 'GitHub', icon: <FaGithub size={40} className={styles.githubIcon} /> },
   { name: 'AWS', icon: <FaAws size={40} style={{ color: '#FF9900' }} /> },
   { name: 'CI/CD', icon: <FaCogs size={40} style={{ color: '#FF6B6B' }} /> },
 

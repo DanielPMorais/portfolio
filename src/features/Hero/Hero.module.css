@@ -1,6 +1,6 @@
 .heroBackground {
   padding-top: var(--spacing-10);
-  padding-bottom: var(--spacing-3);
+  padding-bottom: var(--spacing-4);
   gap: var(--spacing-4);
   min-height: 90vh;
   display: flex;
@@ -176,6 +176,51 @@ html[data-theme="dark"] .socialLinks a:hover .icon {
 
 .techIcon:hover {
   transform: scale(1.25);
+}
+
+.javascriptIcon {
+  color: #F0DB4F;
+  transition: color 0.2s ease;
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .javascriptIcon {
+  color: #FF9900;
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .javascriptIcon {
+  color: #F0DB4F;
+}
+
+.linuxIcon {
+  color: #181717;
+  transition: color 0.2s ease;
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .linuxIcon {
+  color: #181717;
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .linuxIcon {
+  color: #F0DB4F;
+}
+
+.githubIcon {
+  color: #181717;
+  transition: color 0.2s ease;
+}
+
+/* Tema claro */
+html:not([data-theme="dark"]) .githubIcon {
+  color: #181717;
+}
+
+/* Tema escuro */
+html[data-theme="dark"] .githubIcon {
+  color: #E8F1FF;
 }
 
 @keyframes scroll {
