@@ -68,3 +68,36 @@ button {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-body);
 }
+
+/* Loader global (CSS crítico para evitar FOUC do loader) */
+.app-loader-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background, #0b0b0f);
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.app-loader-spinner {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  border-top-color: var(--color-text-body, #7c3aed);
+  animation: app-loader-spin 1s linear infinite;
+}
+
+@keyframes app-loader-spin {
+  to { transform: rotate(360deg); }
+}
+
+.app-loader-backdrop.app-loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
