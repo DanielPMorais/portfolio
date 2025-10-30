@@ -64,12 +64,27 @@ const techIcons = [
 
 export function Hero() {
   const { t } = useT();
+  const highlight = (text, keywords) => {
+    if (!keywords || keywords.length === 0) return text;
+    const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pattern = new RegExp(`\\b(${keywords.map(escape).join('|')})\\b`, 'g');
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+      parts.push(<strong key={`${match.index}-${match[0]}`}>{match[0]}</strong>);
+      lastIndex = pattern.lastIndex;
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+    return parts;
+  };
   return (
     <section id="home" className={styles.heroBackground}>
       <Container className={styles.heroContainer}>
         <div className={styles.heroContent}>
           <h1>{t.hero.title}</h1>
-          <p>{t.hero.body}</p>
+          <p>{highlight(t.hero.body, t.hero.keywords)}</p>
 
           <div className={styles.techStack}>
             <div className={styles.scrollerTrack}>

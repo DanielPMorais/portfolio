@@ -8,6 +8,21 @@ import { useT } from '../../i18n';
 export function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useT();
+  const highlight = (text, keywords) => {
+    if (!keywords || keywords.length === 0) return text;
+    const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const pattern = new RegExp(`\\b(${keywords.map(escape).join('|')})\\b`, 'g');
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+      parts.push(<strong key={`${match.index}-${match[0]}`}>{match[0]}</strong>);
+      lastIndex = pattern.lastIndex;
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+    return parts;
+  };
 
   return (
     <>
@@ -26,7 +41,7 @@ export function About() {
               <h2>{t.about.title}</h2>
 
               {/* --- Texto Único --- */}
-              <p>{t.about.body}</p>
+              <p>{highlight(t.about.body, t.about.keywords)}</p>
 
               {/* Botões */}
               <div className={styles.buttonContainer}>
