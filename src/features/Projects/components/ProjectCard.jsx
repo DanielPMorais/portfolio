@@ -5,6 +5,7 @@ import {
   FaReact,
   FaAngular,
   FaCss3Alt,
+  FaHtml5,
   FaNode,
   FaAws,
   FaFigma,
@@ -22,7 +23,9 @@ import {
   SiEslint,
   SiPrettier,
   SiZod,
+  SiJquery,
 } from 'react-icons/si';
+import { BsBootstrap } from 'react-icons/bs';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { TbApi } from 'react-icons/tb';
 
@@ -32,9 +35,12 @@ const iconMap = {
   angular: FaAngular,
   typescript: SiTypescript,
   javascript: IoLogoJavascript,
+  html: FaHtml5,
   vite: SiVite,
   tailwind: SiTailwindcss,
   css: FaCss3Alt,
+  jquery: SiJquery,
+  bootstrap: BsBootstrap,
 
   // Back-End & API
   node: FaNode,
@@ -68,9 +74,12 @@ const iconTitles = {
   angular: 'Angular',
   typescript: 'TypeScript',
   javascript: 'JavaScript',
+  html: 'HTML5',
   vite: 'Vite',
   tailwind: 'Tailwind CSS',
   css: 'CSS3',
+  jquery: 'jQuery',
+  bootstrap: 'Bootstrap',
   node: 'Node.js',
   express: 'Express',
   'api-rest': 'REST API',

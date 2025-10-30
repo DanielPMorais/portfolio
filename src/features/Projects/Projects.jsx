@@ -25,6 +25,12 @@ import portfolioCover from '../../assets/images/portfolio/pf-cover.webp';
 import portfolio1 from '../../assets/images/portfolio/pf-projects.webp';
 import portfolio2 from '../../assets/images/portfolio/pf-skills.webp';
 import portfolio3 from '../../assets/images/portfolio/pf-about.webp';
+import cardapioRestauranteCover from '../../assets/images/cardapio-restaurante/cr-cover.webp';
+import cardapioRestaurante1 from '../../assets/images/cardapio-restaurante/cr-cardapio.webp';
+import cardapioRestaurante2 from '../../assets/images/cardapio-restaurante/cr-step1.webp';
+import cardapioRestaurante3 from '../../assets/images/cardapio-restaurante/cr-step2.webp';
+import cardapioRestaurante4 from '../../assets/images/cardapio-restaurante/cr-step3.webp';
+import cardapioRestaurante5 from '../../assets/images/cardapio-restaurante/cr-whatsapp.webp';
 
 const featuredProjectsData = [
   {
@@ -96,22 +102,37 @@ Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e 
     `,
     url: 'https://danielpmorais.vercel.app/',
   },
-  //   {
-  //     id: 5,
-  //     title: 'Portfólio Pessoal',
-  //     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
-  //     images: [portfolioCover, portfolio1, portfolio2],
-  //     description: `
-  // Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+  {
+    id: 5,
+    title: 'Cardápio Restaurante',
+    techs: ['javascript', 'html', 'css', 'jquery', 'bootstrap'],
+    images: [
+      cardapioRestauranteCover,
+      cardapioRestaurante1,
+      cardapioRestaurante2,
+      cardapioRestaurante3,
+      cardapioRestaurante4,
+      cardapioRestaurante5,
+    ],
+    description: `
+O Cardápio Online é uma aplicação web estática desenvolvida para apresentar menus digitais com categorias organizadas (burgers, churrasco, pizzas, sobremesas, bebidas e steaks). 
+O site é responsivo, leve e permite ao usuário realizar pedidos via WhatsApp, com cálculo automático de entrega e coleta de endereço por CEP utilizando a API ViaCEP.
 
-  // O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+Entre as principais funcionalidades estão:
+- Listagem paginada de produtos com botão "Ver mais".
+- Carrinho dinâmico com ajuste de quantidades, subtotal e taxa de entrega.
+- Busca automática de endereço via CEP.
+- Link direto para finalização de pedido no WhatsApp.
+- Integração com redes sociais (Instagram, Facebook) e botões de contato rápido.
 
-  // Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+O projeto foi construído com HTML5, CSS3, JavaScript e jQuery, além de bibliotecas como Bootstrap 4, Font Awesome, Animate.css, WOW.js e Modernizr. 
+Por ser um site estático, pode ser hospedado facilmente em plataformas como GitHub Pages, Netlify ou Vercel.
 
-  // Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
-  //     `,
-  //     url: 'https://danielpmorais.vercel.app/',
-  //   },
+Atuação: desenvolvi toda a estrutura do site, incluindo o layout, a lógica do carrinho e a integração com o WhatsApp e ViaCEP. 
+Implementei também as animações, a responsividade e as configurações dinâmicas de redes sociais e entrega.
+    `,
+    url: 'https://danielpmorais.github.io/cardapio-online/#reservas',
+  },
   //   {
   //     id: 6,
   //     title: 'Portfólio Pessoal',
