@@ -41,10 +41,69 @@
   transform: translateY(-2px); /* Seta sobe no hover */
 }
 
+.langSwitcher {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.flagButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flagButton:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+.flagActive {
+  border-color: var(--color-primary);
+}
+
+.flagEmoji {
+  font-size: 1rem;
+}
+
 @media (min-width: 768px) {
   .footerContainer {
-    /* Desktop: lado a lado */
-    flex-direction: row; 
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* centro fixo, lados flexíveis */
+    align-items: center;
+    gap: var(--spacing-2);
+    text-align: left;
+  }
+
+  .leftArea {
+    min-width: 0; /* permite quebra dentro da coluna */
+    overflow-wrap: anywhere;
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center; /* centraliza horizontal e verticalmente dentro da coluna */
+    text-align: center;
+    justify-content: left;
+    font-size: 0.80rem;
+  }
+
+  .desktopBreak {
+    display: inline;
+  }
+
+  .langSwitcher {
+    justify-self: center; /* centraliza exatamente no grid */
+  }
+
+  .backToTop {
+    justify-self: end; /* alinha à direita do grid */
   }
 }
+
