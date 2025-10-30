@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './Skills.module.css';
 import { Container } from '../../components/layout/Container/Container';
 import { SkillCard } from './components/SkillCard';
+import { useT } from '../../i18n';
 
 const softSkillsData = [
   {
@@ -130,6 +131,7 @@ Outros: GameMaker (prototipagem de ideias e lógicas de jogos).
 ];
 
 export function Skills() {
+  const { t } = useT();
   // O estado 'soft' ou 'hard'
   const [activeTab, setActiveTab] = useState('hard');
   const tabsContainerRef = useRef(null);
@@ -200,7 +202,7 @@ export function Skills() {
             className={`${styles.tabButton} ${activeTab === 'hard' ? styles.activeTab : ''}`}
             onClick={() => setActiveTab('hard')}
           >
-            Hard-Skills
+            {t.skills.hard}
           </button>
 
           <button
@@ -208,7 +210,7 @@ export function Skills() {
             className={`${styles.tabButton} ${activeTab === 'soft' ? styles.activeTab : ''}`}
             onClick={() => setActiveTab('soft')}
           >
-            Soft-Skills
+            {t.skills.soft}
           </button>
         </div>
 

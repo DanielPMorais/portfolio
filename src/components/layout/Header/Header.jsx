@@ -5,6 +5,8 @@ import { CgClose } from 'react-icons/cg';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { Container } from '../Container/Container';
 import { useTheme } from '../../../hooks/useTheme';
+import { useLanguage } from '../../../hooks/useLanguage';
+import { useT } from '../../../i18n';
 
 export function Header({ activeSection }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,16 +14,18 @@ export function Header({ activeSection }) {
   const indicatorRef = useRef(null);
 
   const { theme, toggleTheme } = useTheme();
+  const { language } = useLanguage();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const { t } = useT();
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#projects', label: 'Projetos' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#about-me', label: 'Sobre mim' },
+    { href: '#home', label: t.nav.home },
+    { href: '#projects', label: t.nav.projects },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#about-me', label: t.nav.about },
   ];
 
   // Capitaliza a primeira letra (ex: 'projetos' -> 'Projetos')
@@ -48,7 +52,7 @@ export function Header({ activeSection }) {
     } else {
       indicatorRef.current.style.opacity = '0';
     }
-  }, [activeSection]);
+  }, [activeSection, language]);
 
   // Recalcula posição quando a janela é redimensionada
   useEffect(() => {
@@ -80,7 +84,7 @@ export function Header({ activeSection }) {
       window.removeEventListener('resize', handleResize);
       clearTimeout(timer);
     };
-  }, [activeSection]);
+  }, [activeSection, language]);
 
   return (
     <header

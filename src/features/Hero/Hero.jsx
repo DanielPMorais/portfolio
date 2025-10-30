@@ -25,6 +25,7 @@ import {
   SiMongodb,
 } from 'react-icons/si';
 import { Container } from '../../components/layout/Container/Container';
+import { useT } from '../../i18n';
 
 const socialLinks = [
   { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/danielpmorais' },
@@ -62,18 +63,13 @@ const techIcons = [
 ];
 
 export function Hero() {
+  const { t } = useT();
   return (
     <section id="home" className={styles.heroBackground}>
       <Container className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <h1>Olá, sou Daniel!</h1>
-          <p>
-            Desenvolvedor Full Stack com experiência em{' '}
-            <b>Java, Spring Boot, Python, Angular e React</b>, além de sólidos conhecimentos em{' '}
-            <b>TypeScript, Tailwind, PostgreSQL e práticas de CI/CD</b>. Tenho foco em criar{' '}
-            <b>aplicações web modernas, escaláveis e orientadas à experiência do usuário</b>, unindo
-            design limpo, código bem estruturado e propósito real nas soluções.
-          </p>
+          <h1>{t.hero.title}</h1>
+          <p>{t.hero.body}</p>
 
           <div className={styles.techStack}>
             <div className={styles.scrollerTrack}>
@@ -108,7 +104,7 @@ export function Hero() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Visitar ${link.name}`}
+                aria-label={t.hero.ariaVisit(link.name)}
               >
                 {React.cloneElement(link.icon, { className: styles.icon })}
               </a>

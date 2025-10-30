@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Projects.module.css';
 import { ProjectCard } from './components/ProjectCard';
 import { Container } from '../../components/layout/Container/Container';
+import { useT } from '../../i18n';
 import conecturCover from '../../assets/images/conectur/ct-cover.webp';
 import conectur1 from '../../assets/images/conectur/ct-welcome.webp';
 import conectur2 from '../../assets/images/conectur/ct-home.webp';
@@ -145,11 +146,12 @@ Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e 
 ];
 
 export function Projects() {
+  const { t } = useT();
   return (
     <section id="projects" className={styles.projectsSection}>
       <Container>
         {/* Subseção Destaques */}
-        <h3 className={styles.sectionSubtitle}>Destaques</h3>
+        <h3 className={styles.sectionSubtitle}>{t.projects.featured}</h3>
         <div className={`${styles.projectGrid} ${styles.featuredGrid}`}>
           {featuredProjectsData.map((project) => (
             <ProjectCard
@@ -166,7 +168,7 @@ export function Projects() {
 
         {/* Subseção Todos os Projetos */}
         {/* TODO: Adicionar filtro para tipos de projetos */}
-        <h3 className={styles.sectionSubtitle}>Outros projetos</h3>
+        <h3 className={styles.sectionSubtitle}>{t.projects.others}</h3>
         <div className={`${styles.projectGrid} ${styles.allGrid}`}>
           {otherProjectsData.map((project) => (
             <ProjectCard
