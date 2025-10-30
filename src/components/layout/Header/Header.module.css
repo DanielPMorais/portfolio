@@ -81,13 +81,17 @@
   padding: var(--spacing-4);
   transform: translateY(-20px);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.35s ease;
   z-index: 110;
 }
 
 .navbar.isNavOpen .mobileNav {
   transform: translateY(0);
   opacity: 1;
+  max-height: 480px; /* tamanho suficiente para o conteúdo típico */
   pointer-events: auto;
 }
 

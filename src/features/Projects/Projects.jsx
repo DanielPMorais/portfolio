@@ -22,6 +22,7 @@ import fitTrack4 from '../../assets/images/fittrack/ft-workout.webp';
 import portfolioCover from '../../assets/images/portfolio/pf-cover.webp';
 import portfolio1 from '../../assets/images/portfolio/pf-projects.webp';
 import portfolio2 from '../../assets/images/portfolio/pf-skills.webp';
+import portfolio3 from '../../assets/images/portfolio/pf-about.webp';
 
 const featuredProjectsData = [
   {
@@ -81,7 +82,7 @@ const otherProjectsData = [
     id: 4,
     title: 'Portfólio Pessoal',
     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
-    images: [portfolioCover, portfolio1, portfolio2],
+    images: [portfolioCover, portfolio1, portfolio2, portfolio3],
     description: `
 Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
 

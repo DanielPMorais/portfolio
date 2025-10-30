@@ -92,13 +92,15 @@ export function Header({ activeSection }) {
           className={styles.hamburgerButton}
           onClick={toggleMobileMenu}
           aria-label="Abrir menu"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {isMobileMenuOpen ? <CgClose /> : <HiMenu />}
         </button>
 
         {/* Desktop: Logo à esquerda */}
         <div className={styles.logo}>
-          <a href="#">Daniel</a>
+          <a href="#home">Daniel</a>
         </div>
 
         {/* Mobile: Título centralizado */}
@@ -146,19 +148,17 @@ export function Header({ activeSection }) {
         </div>
       </Container>
 
-      {isMobileMenuOpen && (
-        <nav className={styles.mobileNav}>
-          <ul className={styles.mobileNavList}>
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} onClick={toggleMobileMenu}>
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <nav id="mobile-navigation" className={styles.mobileNav} aria-hidden={!isMobileMenuOpen}>
+        <ul className={styles.mobileNavList}>
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={toggleMobileMenu}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

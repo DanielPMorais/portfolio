@@ -1,21 +1,10 @@
-/* [ OPÇÃO 1: SPINNER COM GLOW ] */
-
 .backdrop {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* Melhoria: Usamos RGBA para uma leve transparência 
-    em vez de um preto sólido. 
-  */
-  background: rgba(11, 11, 15, 0.9);
-  
-  /* Opcional: Desfoque o conteúdo atrás do loader. 
-    Dá um visual "glassmorphism" moderno.
-  */
-  backdrop-filter: blur(4px);
+  background: var(--color-background, #0b0b0f);
   z-index: 9999;
 }
 
@@ -25,14 +14,11 @@
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.15);
   border-top-color: var(--color-primary, #7c3aed);
-  animation: spin 0.8s linear infinite; /* Um pouco mais rápido */
-
-  /* Melhoria: Adiciona um "glow" (brilho) usando
-    a cor primária. Isso dá mais destaque.
-  */
-  box-shadow: 0 0 12px 0 var(--color-primary, #7c3aed);
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+
