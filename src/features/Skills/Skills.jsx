@@ -3,6 +3,7 @@ import styles from './Skills.module.css';
 import { Container } from '../../components/layout/Container/Container';
 import { SkillCard } from './components/SkillCard';
 import { useT } from '../../i18n';
+import { useLanguage } from '../../hooks/useLanguage';
 
 const softSkillsData = [
   {
@@ -132,6 +133,7 @@ Outros: GameMaker (prototipagem de ideias e lógicas de jogos).
 
 export function Skills() {
   const { t } = useT();
+  const { language } = useLanguage();
   // O estado 'soft' ou 'hard'
   const [activeTab, setActiveTab] = useState('hard');
   const tabsContainerRef = useRef(null);
@@ -221,7 +223,9 @@ export function Skills() {
               key={skill.id}
               title={skill.title}
               icons={skill.icons}
-              description={skill.description}
+              description={
+                language === 'en' && skill.descriptionEn ? skill.descriptionEn : skill.description
+              }
               isHardSkill={activeTab === 'hard'}
             />
           ))}

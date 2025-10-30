@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import styles from './ProjectModal.module.css';
 import { FaTimes, FaExternalLinkAlt } from 'react-icons/fa';
 import { ImageCarousel } from './ImageCarousel';
+import { useT } from '../../../i18n';
 
 export function ProjectModal({ isOpen, onClose, title, images, description, url }) {
+  const { t } = useT();
   if (!isOpen) return null;
 
   const modalContent = (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose} aria-label="Fechar modal">
+        <button className={styles.closeButton} onClick={onClose} aria-label={t.modal.closeAria}>
           <FaTimes />
         </button>
 
@@ -35,7 +37,7 @@ export function ProjectModal({ isOpen, onClose, title, images, description, url 
         {url && (
           <div className={styles.linkContainer}>
             <a href={url} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-              <span>Visitar site</span>
+              <span>{t.projectModal.visitSite}</span>
               <FaExternalLinkAlt />
             </a>
           </div>

@@ -3,9 +3,11 @@ import styles from './SkillCard.module.css';
 import { SkillIcons } from './SkillIcons';
 import { SkillModal } from './SkillModal';
 import { FaTimes } from 'react-icons/fa';
+import { useT } from '../../../i18n';
 
 export function SkillCard({ title, icons, description = false }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useT();
 
   const handleCardClick = () => {
     if (description) {
@@ -34,7 +36,7 @@ export function SkillCard({ title, icons, description = false }) {
             <button
               className={styles.closeButton}
               onClick={handleCloseModal}
-              aria-label="Fechar modal"
+              aria-label={t.modal.closeAria}
             >
               <FaTimes />
             </button>

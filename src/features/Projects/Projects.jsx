@@ -3,6 +3,7 @@ import styles from './Projects.module.css';
 import { ProjectCard } from './components/ProjectCard';
 import { Container } from '../../components/layout/Container/Container';
 import { useT } from '../../i18n';
+import { useLanguage } from '../../hooks/useLanguage';
 import conecturCover from '../../assets/images/conectur/ct-cover.webp';
 import conectur1 from '../../assets/images/conectur/ct-welcome.webp';
 import conectur2 from '../../assets/images/conectur/ct-home.webp';
@@ -147,6 +148,7 @@ Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e 
 
 export function Projects() {
   const { t } = useT();
+  const { language } = useLanguage();
   return (
     <section id="projects" className={styles.projectsSection}>
       <Container>
@@ -160,7 +162,11 @@ export function Projects() {
               techs={project.techs}
               cover={project.cover}
               images={project.images}
-              description={project.description}
+              description={
+                language === 'en' && project.descriptionEn
+                  ? project.descriptionEn
+                  : project.description
+              }
               url={project.url}
             />
           ))}
@@ -177,7 +183,11 @@ export function Projects() {
               techs={project.techs}
               cover={project.cover || (project.images && project.images[0])}
               images={project.images}
-              description={project.description}
+              description={
+                language === 'en' && project.descriptionEn
+                  ? project.descriptionEn
+                  : project.description
+              }
               url={project.url}
             />
           ))}
