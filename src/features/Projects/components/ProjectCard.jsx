@@ -18,12 +18,14 @@ import {
   SiTailwindcss,
   SiExpress,
   SiMysql,
+  SiPostgresql,
   SiPrisma,
   SiReact,
   SiEslint,
   SiPrettier,
   SiZod,
   SiJquery,
+  SiJsonwebtokens,
 } from 'react-icons/si';
 import { BsBootstrap } from 'react-icons/bs';
 import { IoLogoJavascript } from 'react-icons/io5';
@@ -50,6 +52,7 @@ const iconMap = {
 
   // Banco de Dados
   mysql: SiMysql,
+  postgresql: SiPostgresql,
   prisma: SiPrisma,
 
   // Mobile
@@ -66,6 +69,7 @@ const iconMap = {
   // Security
   bcrypt: FaShieldAlt,
   cors: FaShieldAlt,
+  jwt: SiJsonwebtokens,
   zod: SiZod,
 };
 
@@ -85,6 +89,7 @@ const iconTitles = {
   'api-rest': 'REST API',
   php: 'PHP',
   mysql: 'MySQL',
+  postgresql: 'PostgreSQL',
   prisma: 'Prisma',
   'react-native': 'React Native',
   figma: 'Figma',
@@ -93,6 +98,7 @@ const iconTitles = {
   aws: 'AWS',
   bcrypt: 'bcrypt',
   cors: 'CORS',
+  jwt: 'JWT',
   zod: 'Zod',
 };
 

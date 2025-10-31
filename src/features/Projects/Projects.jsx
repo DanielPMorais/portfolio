@@ -31,6 +31,10 @@ import cardapioRestaurante2 from '../../assets/images/cardapio-restaurante/cr-st
 import cardapioRestaurante3 from '../../assets/images/cardapio-restaurante/cr-step2.webp';
 import cardapioRestaurante4 from '../../assets/images/cardapio-restaurante/cr-step3.webp';
 import cardapioRestaurante5 from '../../assets/images/cardapio-restaurante/cr-whatsapp.webp';
+import quickOrderCover from '../../assets/images/quickorder/qo-cover.webp';
+import quickOrder1 from '../../assets/images/quickorder/qo-image1.webp';
+import quickOrder2 from '../../assets/images/quickorder/qo-image2.webp';
+import quickOrder3 from '../../assets/images/quickorder/qo-image3.webp';
 
 const featuredProjectsData = [
   {
@@ -133,22 +137,43 @@ Implementei também as animações, a responsividade e as configurações dinâm
     `,
     url: 'https://danielpmorais.github.io/cardapio-online/#reservas',
   },
-  //   {
-  //     id: 6,
-  //     title: 'Portfólio Pessoal',
-  //     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
-  //     images: [portfolioCover, portfolio1, portfolio2],
-  //     description: `
-  // Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+  {
+    id: 6,
+    title: 'QuickOrder',
+    techs: [
+      'react',
+      'vite',
+      'typescript',
+      'tailwind',
+      'node',
+      'express',
+      'postgresql',
+      'prisma',
+      'jwt',
+    ],
+    cover: quickOrderCover,
+    images: [quickOrder1, quickOrder2, quickOrder3],
+    description: `
+O QuickOrder é uma aplicação web full stack desenvolvida para digitalizar o processo de pedidos em restaurantes e lanchonetes, 
+fornecendo um fluxo completo — do cardápio à finalização via WhatsApp ou sistema interno de gestão. 
+É uma evolução direta do projeto Cardápio Online, com arquitetura modular, autenticação e integração de banco de dados.
 
-  // O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+Entre as principais funcionalidades estão:
+- Interface administrativa para gerenciar produtos, categorias e pedidos.
+- Cardápio dinâmico com imagens, descrições e preços.
+- Carrinho interativo com cálculo automático de entrega e total.
+- Autenticação com JWT e proteção de rotas.
+- Comunicação via API RESTful construída em Node.js e Express.
+- Integração com banco de dados PostgreSQL via Prisma ORM.
+- Deploy automatizado e contínuo com Vercel.
 
-  // Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+O frontend foi desenvolvido em React + Vite + TypeScript, utilizando Tailwind CSS para o design e responsividade. 
+O backend foi estruturado com Node.js e Express, adotando boas práticas de segurança, validação e modelagem de dados.
 
-  // Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
-  //     `,
-  //     url: 'https://danielpmorais.vercel.app/',
-  //   },
+Atuação: desenvolvi tanto o frontend quanto o backend do sistema, estruturando a base de dados, 
+as rotas e os controladores da API. Também implementei a autenticação JWT, o painel administrativo e as integrações externas.
+    `,
+  },
   //   {
   //     id: 7,
   //     title: 'Portfólio Pessoal',
