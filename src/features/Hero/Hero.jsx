@@ -57,9 +57,6 @@ const techIcons = [
   { name: 'GitHub', icon: <FaGithub size={40} className={styles.githubIcon} /> },
   { name: 'AWS', icon: <FaAws size={40} style={{ color: '#FF9900' }} /> },
   { name: 'CI/CD', icon: <FaCogs size={40} style={{ color: '#FF6B6B' }} /> },
-
-  // IoT & Automação
-  { name: 'Arduino', icon: <FaMicrochip size={40} style={{ color: '#00979D' }} /> },
 ];
 
 export function Hero() {
