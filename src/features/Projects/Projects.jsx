@@ -54,6 +54,17 @@ Atuação: fui responsável pelo desenvolvimento do backend e pela documentaçã
 No backend, construí a base do sistema com Node.js e Express, implementei o ORM Prisma para o MySQL e desenvolvi a lógica de negócio e segurança, incluindo a criptografia de senhas com bcrypt. 
 Na documentação, organizei a arquitetura do sistema, produzi diagramas (Casos de Uso, Classes) e redigi o guia de instalação e execução.
     `,
+    descriptionEn: `
+Conectur is a mobile application that won 2nd place in a hackathon with 10 teams. 
+The project was created to solve the lack of centralization in the dissemination of events and tourist spots in Caraguatatuba, a city whose economy heavily depends on tourism.
+
+The platform works as an events calendar and social network, encouraging engagement through a gamification system. 
+Users accumulate virtual coins by participating in and promoting events, which can be exchanged for rewards, such as coupons and gifts.
+
+Role: I was responsible for backend development and technical documentation. 
+In the backend, I built the system foundation with Node.js and Express, implemented Prisma ORM for MySQL, and developed business logic and security, including password encryption with bcrypt. 
+In the documentation, I organized the system architecture, produced diagrams (Use Cases, Classes) and wrote the installation and execution guide.
+    `,
     url: 'https://www.figma.com/proto/lBgRCEdsznovSE0M4tVgIO/conectur?node-id=10-1122&t=oEWMGwkIRRCeO06d-1',
   },
   {
@@ -68,6 +79,13 @@ O projeto foi construído com tecnologias web atuais, oferecendo uma navegação
 
 Atuação: fui responsável por todo o desenvolvimento do site, desde a configuração do ambiente com Vite e TypeScript até a criação da interface com React e Tailwind CSS. 
 Implementei componentes reutilizáveis com shadcn/ui, garantindo responsividade, acessibilidade e otimização do desempenho.
+    `,
+    descriptionEn: `
+Limas Pacheco is a modern and responsive institutional website developed for a company specialized in events and celebrations. 
+The project was built with current web technologies, offering fluid navigation and professional visual.
+
+Role: I was responsible for the entire website development, from environment setup with Vite and TypeScript to interface creation with React and Tailwind CSS. 
+I implemented reusable components with shadcn/ui, ensuring responsiveness, accessibility, and performance optimization.
     `,
     url: 'https://limaspacheco.vercel.app/',
   },
@@ -84,6 +102,14 @@ O projeto permite visualizar treinos, acompanhar séries e cargas, iniciar o mod
 Atuação: desenvolvi toda a aplicação frontend, estruturando o projeto com React e Vite e aplicando boas práticas de componentização, organização de pastas e responsividade. 
 Implementei o roteamento com react-router-dom, criei componentes reutilizáveis e utilizei CSS Modules com variáveis globais. 
 Enquanto a API RESTful em PHP é finalizada, o sistema consome dados fictícios (mock data) para simular o funcionamento real.
+    `,
+    descriptionEn: `
+FitTrack is a web application developed to replace physical workout sheets with a digital tracking system. 
+The project allows users to view workouts, track sets and weights, start workout mode with a timer, and record user progress.
+
+Role: I developed the entire frontend application, structuring the project with React and Vite and applying best practices for componentization, folder organization, and responsiveness. 
+I implemented routing with react-router-dom, created reusable components, and used CSS Modules with global variables. 
+While the RESTful API in PHP is being finalized, the system consumes mock data to simulate real functionality.
     `,
   },
 ];
@@ -103,6 +129,15 @@ O site foi construído com React e Vite, priorizando desempenho, organização e
 Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
 
 Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
+    `,
+    descriptionEn: `
+This project is the development of my personal portfolio, created to present my trajectory, skills, and main projects in a professional and interactive way.
+
+The site was built with React and Vite, prioritizing performance, organization, and development best practices. Styling was done with Tailwind CSS, using responsive design and smooth animations to improve user experience.
+
+I implemented reusable components, a dynamic modal system, and modular sections to facilitate future updates. Additionally, I adopted a semantic commit flow with Husky and Commitlint, automatic CI/CD integration with Vercel, and code structure optimized for maintenance and scalability.
+
+Currently, the portfolio includes sections for presentation, skills (soft and hard), projects, contact, and CV download, reflecting my growth as a full-stack developer.
     `,
     url: 'https://danielpmorais.vercel.app/',
   },
@@ -134,6 +169,23 @@ Por ser um site estático, pode ser hospedado facilmente em plataformas como Git
 
 Atuação: desenvolvi toda a estrutura do site, incluindo o layout, a lógica do carrinho e a integração com o WhatsApp e ViaCEP. 
 Implementei também as animações, a responsividade e as configurações dinâmicas de redes sociais e entrega.
+    `,
+    descriptionEn: `
+The Online Menu is a static web application developed to display digital menus with organized categories (burgers, barbecue, pizzas, desserts, drinks, and steaks). 
+The site is responsive, lightweight, and allows users to place orders via WhatsApp, with automatic delivery calculation and address collection by postal code using the ViaCEP API.
+
+Among the main features are:
+- Paginated product listing with "See more" button.
+- Dynamic cart with quantity adjustment, subtotal, and delivery fee.
+- Automatic address search via postal code.
+- Direct link for order completion on WhatsApp.
+- Social media integration (Instagram, Facebook) and quick contact buttons.
+
+The project was built with HTML5, CSS3, JavaScript, and jQuery, in addition to libraries like Bootstrap 4, Font Awesome, Animate.css, WOW.js, and Modernizr. 
+Being a static site, it can be easily hosted on platforms like GitHub Pages, Netlify, or Vercel.
+
+Role: I developed the entire site structure, including layout, cart logic, and integration with WhatsApp and ViaCEP. 
+I also implemented animations, responsiveness, and dynamic social media and delivery configurations.
     `,
     url: 'https://danielpmorais.github.io/cardapio-online/#reservas',
   },
@@ -172,6 +224,26 @@ O backend foi estruturado com Node.js e Express, adotando boas práticas de segu
 
 Atuação: desenvolvi tanto o frontend quanto o backend do sistema, estruturando a base de dados, 
 as rotas e os controladores da API. Também implementei a autenticação JWT, o painel administrativo e as integrações externas.
+    `,
+    descriptionEn: `
+QuickOrder is a full-stack web application developed to digitize the ordering process in restaurants and cafes, 
+providing a complete flow — from menu to completion via WhatsApp or internal management system. 
+It is a direct evolution of the Online Menu project, with modular architecture, authentication, and database integration.
+
+Among the main features are:
+- Administrative interface to manage products, categories, and orders.
+- Dynamic menu with images, descriptions, and prices.
+- Interactive cart with automatic delivery and total calculation.
+- JWT authentication and route protection.
+- Communication via RESTful API built with Node.js and Express.
+- PostgreSQL database integration via Prisma ORM.
+- Automated and continuous deployment with Vercel.
+
+The frontend was developed in React + Vite + TypeScript, using Tailwind CSS for design and responsiveness. 
+The backend was structured with Node.js and Express, adopting best practices for security, validation, and data modeling.
+
+Role: I developed both the frontend and backend of the system, structuring the database, 
+API routes and controllers. I also implemented JWT authentication, the administrative panel, and external integrations.
     `,
   },
   //   {
