@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import styles from './About.module.css';
 import { Container } from '../../components/layout/Container/Container';
-import myCV from '../../assets/files/DanielMorais_CV.pdf';
+import myCVPtBr from '../../assets/files/DanielMorais_CV_pt-br.pdf';
+import myCVEn from '../../assets/files/DanielMorais_CV_en.pdf';
 import { Modal } from '../../components/common/Modal/Modal';
 import { useT } from '../../i18n';
+import { useLanguage } from '../../hooks/useLanguage';
 
 export function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useT();
+  const { language } = useLanguage();
   const highlight = (text, keywords) => {
     if (!keywords || keywords.length === 0) return text;
     const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -46,8 +49,10 @@ export function About() {
               {/* Botões */}
               <div className={styles.buttonContainer}>
                 <a
-                  href={myCV}
-                  download="DanielMorais_CV.pdf"
+                  href={language === 'pt' ? myCVPtBr : myCVEn}
+                  download={
+                    language === 'pt' ? 'DanielMorais_CV_pt-br.pdf' : 'DanielMorais_CV_en.pdf'
+                  }
                   className={`${styles.button} ${styles.primaryButton}`}
                 >
                   {t.about.downloadCv}
