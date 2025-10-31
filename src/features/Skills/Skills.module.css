@@ -14,7 +14,7 @@
 
 
 .tabButton {
-  font-size: var(--font-size-content);
+  font-size: var(--font-size-body);
   padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--border-radius-md);
   border: 2px solid transparent;
