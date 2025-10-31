@@ -14,7 +14,7 @@ export function Header({ activeSection }) {
   const indicatorRef = useRef(null);
 
   const { theme, toggleTheme } = useTheme();
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -125,6 +125,36 @@ export function Header({ activeSection }) {
             ))}
             {/* Indicador deslizante */}
             <div ref={indicatorRef} className={styles.slideIndicator} style={{ opacity: 0 }} />
+            <div
+              className={styles.langSwitcher}
+              role="group"
+              aria-label={language === 'pt' ? 'Selecionar idioma' : 'Select language'}
+            >
+              <button
+                type="button"
+                className={`${styles.flagButton} ${language === 'pt' ? styles.flagActive : ''}`}
+                onClick={() => setLanguage('pt')}
+                aria-pressed={language === 'pt'}
+                title="Português (Brasil)"
+              >
+                <span className={styles.flagEmoji} aria-hidden="true">
+                  🇧🇷
+                </span>
+                <span className="sr-only">Português</span>
+              </button>
+              <button
+                type="button"
+                className={`${styles.flagButton} ${language === 'en' ? styles.flagActive : ''}`}
+                onClick={() => setLanguage('en')}
+                aria-pressed={language === 'en'}
+                title="English (US)"
+              >
+                <span className={styles.flagEmoji} aria-hidden="true">
+                  🇺🇸
+                </span>
+                <span className="sr-only">English</span>
+              </button>
+            </div>
           </ul>
         </nav>
 
@@ -161,6 +191,43 @@ export function Header({ activeSection }) {
               </a>
             </li>
           ))}
+
+          <div
+            className={styles.langSwitcher}
+            role="group"
+            aria-label={language === 'pt' ? 'Selecionar idioma' : 'Select language'}
+          >
+            <button
+              type="button"
+              className={`${styles.flagButton} ${language === 'pt' ? styles.flagActive : ''}`}
+              onClick={() => {
+                toggleMobileMenu();
+                setLanguage('pt');
+              }}
+              aria-pressed={language === 'pt'}
+              title="Português (Brasil)"
+            >
+              <span className={styles.flagEmoji} aria-hidden="true">
+                🇧🇷
+              </span>
+              <span className="sr-only">Português</span>
+            </button>
+            <button
+              type="button"
+              className={`${styles.flagButton} ${language === 'en' ? styles.flagActive : ''}`}
+              onClick={() => {
+                toggleMobileMenu();
+                setLanguage('en');
+              }}
+              aria-pressed={language === 'en'}
+              title="English (US)"
+            >
+              <span className={styles.flagEmoji} aria-hidden="true">
+                🇺🇸
+              </span>
+              <span className="sr-only">English</span>
+            </button>
+          </div>
         </ul>
       </nav>
     </header>
