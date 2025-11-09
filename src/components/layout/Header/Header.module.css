@@ -181,8 +181,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: transparent;
@@ -201,7 +201,7 @@
 }
 
 .flagEmoji {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 
@@ -268,4 +268,14 @@
     opacity: 0;
     pointer-events: none; /* Para não interferir com cliques */
   }
+
+  .flagButton {
+    width: 35px;
+    height: 35px;
+  }
+
+  .flagEmoji {
+    font-size: 1rem;
+  }
+  
 }

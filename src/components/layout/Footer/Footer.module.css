@@ -124,4 +124,13 @@
     justify-self: end;
     /* alinha à direita do grid */
   }
+
+  .flagButton {
+    width: 35px;
+    height: 35px;
+  }
+
+  .flagEmoji {
+    font-size: 1rem;
+  }
 }
