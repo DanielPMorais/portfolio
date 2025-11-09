@@ -13,7 +13,7 @@ function App() {
   const sectionIds = ['home', 'projects', 'skills', 'about-me'];
 
   const isMobile = window.innerWidth <= 768;
-  const threshold = isMobile ? '-8% 0px -50% 0px' : '-28% 0px -50% 0px';
+  const threshold = isMobile ? '-1% 0px -50% 0px' : '-20% 0px -50% 0px';
   const activeSection = useScrollSpy(sectionIds, threshold);
 
   useEffect(() => {

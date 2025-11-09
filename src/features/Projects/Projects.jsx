@@ -246,22 +246,31 @@ Role: I developed both the frontend and backend of the system, structuring the d
 API routes and controllers. I also implemented JWT authentication, the administrative panel, and external integrations.
     `,
   },
-  //   {
-  //     id: 7,
-  //     title: 'Portfólio Pessoal',
-  //     techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
-  //     images: [portfolioCover, portfolio1, portfolio2],
-  //     description: `
-  // Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
+  {
+    id: 7,
+    title: 'Portfólio Pessoal',
+    techs: ['figma', 'react', 'vite', 'javascript', 'tailwind', 'css', 'eslint', 'prettier'],
+    images: [portfolioCover, portfolio1, portfolio2, portfolio3],
+    description: `
+Este projeto é o desenvolvimento do meu portfólio pessoal, criado para apresentar minha trajetória, habilidades e principais projetos de forma profissional e interativa.
 
-  // O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
+O site foi construído com React e Vite, priorizando desempenho, organização e boas práticas de desenvolvimento. A estilização foi feita com Tailwind CSS, utilizando design responsivo e animações suaves para melhorar a experiência do usuário.
 
-  // Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
+Implementei componentes reutilizáveis, um sistema de modais dinâmicas e seções modulares para facilitar futuras atualizações. Além disso, adotei um fluxo de commits semânticos com Husky e Commitlint, integração de CI/CD automática com a Vercel e estrutura de código otimizada para manutenção e escalabilidade.
 
-  // Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
-  //     `,
-  //     url: 'https://danielpmorais.vercel.app/',
-  //   },
+Atualmente, o portfólio inclui seções de apresentação, habilidades (soft e hard), projetos, contato e download de currículo, refletindo meu crescimento como desenvolvedor full stack.
+    `,
+    descriptionEn: `
+This project is the development of my personal portfolio, created to present my trajectory, skills, and main projects in a professional and interactive way.
+
+The site was built with React and Vite, prioritizing performance, organization, and development best practices. Styling was done with Tailwind CSS, using responsive design and smooth animations to improve user experience.
+
+I implemented reusable components, a dynamic modal system, and modular sections to facilitate future updates. Additionally, I adopted a semantic commit flow with Husky and Commitlint, automatic CI/CD integration with Vercel, and code structure optimized for maintenance and scalability.
+
+Currently, the portfolio includes sections for presentation, skills (soft and hard), projects, contact, and CV download, reflecting my growth as a full-stack developer.
+    `,
+    url: 'https://danielpmorais.vercel.app/',
+  },
 ];
 
 export function Projects() {

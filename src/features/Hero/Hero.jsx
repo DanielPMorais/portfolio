@@ -9,11 +9,8 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaPython,
-  FaDatabase,
   FaLinux,
   FaAws,
-  FaCogs,
-  FaMicrochip,
 } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import {
@@ -56,7 +53,6 @@ const techIcons = [
   { name: 'Linux', icon: <FaLinux size={40} className={styles.linuxIcon} /> },
   { name: 'GitHub', icon: <FaGithub size={40} className={styles.githubIcon} /> },
   { name: 'AWS', icon: <FaAws size={40} style={{ color: '#FF9900' }} /> },
-  { name: 'CI/CD', icon: <FaCogs size={40} style={{ color: '#FF6B6B' }} /> },
 ];
 
 export function Hero() {
